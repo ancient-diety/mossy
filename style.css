@@ -1,118 +1,98 @@
 /* =========================
-   🌸 MOSSY REEF v4 (CLEAN)
-   ========================= */
-
-:root {
-    /* 🌈 NEW PALETTE */
-    --phlox: #d96bff;
-    --verbena: #a78bfa;
-    --periwinkle: #8fb8ff;
-    --atlantis: #bff6c6;   /* PRIMARY BACKGROUND */
-    --phthalo: #1f3a93;
-
-    --text: #1f2f3a;
-    --glass: rgba(255,255,255,0.65);
-}
-
-/* =========================
-   🌊 BASE
-   ========================= */
+   🌊 BASE THEME
+========================= */
 
 body {
-    margin: 0;
+    background-color: #d9f3f6;
+    background-image: radial-gradient(circle at top, #eefcff, #d9f3f6);
+
+    color: #4f7d8a;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+
+    margin-left: 240px;
     padding: 25px;
-    padding-left: 270px;
-
     max-width: 900px;
-    margin-inline: auto;
-
-    font-family: "Poppins", "Nunito", Arial, sans-serif;
-    line-height: 1.6;
-
-    color: var(--text);
-
-    background: radial-gradient(circle at top, var(--atlantis), #e9fff1 60%, #f5fbff);
-}
-
-/* =========================
-   🐠 TITLES
-   ========================= */
-
-h1 {
-    text-align: center;
-    color: var(--phthalo);
-    text-shadow: 0 0 10px rgba(143,184,255,0.5);
-}
-
-h2 {
-    color: var(--phlox);
-}
-
-/* =========================
-   🪸 SIDEBAR (DESKTOP)
-   ========================= */
-
-.sidebar {
-    position: fixed;
-    left: 16px;
-    top: 16px;
-    bottom: 16px;
-
-    width: 230px;
-
-    background: linear-gradient(180deg, var(--phthalo), #2c4fb0);
-    border-radius: 22px;
-
-    padding: 18px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-
-    transition: 0.3s ease;
-}
-
-.sidebar h3 {
-    color: white;
-    text-align: center;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: white;
-
-    padding: 10px 12px;
-    border-radius: 999px;
-
-    background: rgba(255,255,255,0.08);
+    line-height: 1.7;
 
     transition: 0.2s ease;
 }
 
-.sidebar a:hover {
-    background: var(--verbena);
-    transform: translateX(4px);
+/* 🐠 TITLE STYLE */
+h1 {
+    color: #1f4e5f;
+    text-shadow: 0 0 10px rgba(143, 191, 212, 0.5);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    color: #2f6f85;
+    margin-top: 30px;
 }
 
 /* =========================
-   🫧 PANELS
-   ========================= */
+   🐟 SIDEBAR (DESKTOP)
+========================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+
+    background: linear-gradient(180deg, #1f4e5f, #2f6f85);
+    padding: 20px;
+
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    color: #d9f3f6;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: #bfe7f5;
+    text-decoration: none;
+
+    margin: 10px 0;
+    padding: 10px;
+
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+    background-color: #4a90a4;
+    color: white;
+    transform: scale(1.03);
+}
+
+/* =========================
+   🧊 PANELS (GLASS CARDS)
+========================= */
 
 .panel {
-    background: var(--glass);
-    border-radius: 20px;
-
+    background: rgba(255, 255, 255, 0.7);
     padding: 18px;
-    margin: 18px 0;
+    border-radius: 16px;
+    margin: 16px 0;
 
-    box-shadow: 0 8px 20px rgba(31,58,147,0.12);
+    box-shadow: 0 8px 18px rgba(31, 78, 95, 0.12);
+    border: 1px solid rgba(79, 125, 138, 0.12);
+
+    backdrop-filter: blur(6px);
 }
 
 /* =========================
-   🧭 CARDS
-   ========================= */
+   🧭 GRID / CARDS
+========================= */
 
 .grid {
     display: flex;
@@ -122,140 +102,125 @@ h2 {
 
 .card {
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
 
-    background: linear-gradient(135deg, var(--phthalo), var(--periwinkle));
-    color: white;
+    background: linear-gradient(135deg, #2f6f85, #4a90a4);
+    color: #e9fbff;
 
     padding: 16px;
-    border-radius: 22px;
+    border-radius: 16px;
 
     text-decoration: none;
 
     transition: 0.25s ease;
-
-    box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 16px rgba(47, 111, 133, 0.2);
 }
 
 .card:hover {
     transform: translateY(-4px) scale(1.03);
-    background: linear-gradient(135deg, var(--phlox), var(--verbena));
+    box-shadow: 0 10px 24px rgba(74, 144, 164, 0.35);
+}
+
+.card p {
+    color: #d0f0ff;
+    font-size: 0.9em;
 }
 
 /* =========================
-   🔘 BUTTONS (CIRCULAR PEARL STYLE)
-   ========================= */
+   🔘 BUTTONS (SOFT + ROUND)
+========================= */
 
 button {
-    background: linear-gradient(135deg, var(--phlox), var(--periwinkle));
+    background: linear-gradient(135deg, #2f6f85, #4a90a4);
     color: white;
 
     border: none;
+    padding: 10px 18px;
+
     border-radius: 999px;
 
-    padding: 10px 20px;
-
     cursor: pointer;
-
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-
     transition: 0.2s ease;
+
+    display: inline-block;
 }
 
 button:hover {
     transform: scale(1.05);
-    background: linear-gradient(135deg, var(--verbena), var(--phthalo));
+    box-shadow: 0 0 14px rgba(74, 144, 164, 0.5);
 }
 
 /* =========================
-   🫧 BUBBLES (ENHANCED BUT SAFE)
-   ========================= */
+   🫧 BUBBLES (MORE CHAOS ✨)
+========================= */
 
 .bubbles {
     position: fixed;
     inset: 0;
     pointer-events: none;
+    overflow: hidden;
 }
 
 .bubble {
     position: absolute;
-    bottom: -50px;
+    bottom: -60px;
     font-size: 22px;
     opacity: 0;
     animation: rise 7s infinite ease-in;
 }
 
-.bubble:nth-child(1) { left: 10%; animation-delay: 0s; }
-.bubble:nth-child(2) { left: 25%; animation-delay: 1.5s; }
-.bubble:nth-child(3) { left: 40%; animation-delay: 3s; }
-.bubble:nth-child(4) { left: 60%; animation-delay: 4.5s; }
-.bubble:nth-child(5) { left: 80%; animation-delay: 6s; }
+/* 7 bubbles now 🫧 */
+.bubble:nth-child(1) { left: 8%;  animation-delay: 0s; }
+.bubble:nth-child(2) { left: 22%; animation-delay: 1s; }
+.bubble:nth-child(3) { left: 38%; animation-delay: 2s; }
+.bubble:nth-child(4) { left: 52%; animation-delay: 3s; }
+.bubble:nth-child(5) { left: 66%; animation-delay: 4s; }
+.bubble:nth-child(6) { left: 80%; animation-delay: 5s; }
+.bubble:nth-child(7) { left: 92%; animation-delay: 6s; }
 
 @keyframes rise {
-    0% { transform: translateY(0); opacity: 0; }
-    10% { opacity: 1; }
+    0%   { transform: translateY(0); opacity: 0; }
+    10%  { opacity: 1; }
     100% { transform: translateY(-900px); opacity: 0; }
 }
 
 /* =========================
-   📱 MOBILE FIX (REAL DRAWER)
-   ========================= */
+   📱 MOBILE FIX (CLEAN MODE)
+========================= */
 
-/* toggle hidden checkbox */
-.menu-toggle {
-    display: none;
-}
-
-/* hamburger button */
-.menu-button {
-    display: none;
-    position: fixed;
-    top: 14px;
-    left: 14px;
-
-    z-index: 2000;
-
-    background: var(--phthalo);
-    color: white;
-
-    border: none;
-    border-radius: 12px;
-
-    padding: 10px 12px;
-
-    cursor: pointer;
-}
-
-/* MOBILE MODE */
 @media (max-width: 768px) {
 
     body {
+        margin-left: 0;
         padding: 15px;
-        padding-left: 15px;
         max-width: 100%;
     }
 
-    .menu-button {
-        display: block;
-    }
-
-    /* sidebar becomes hidden drawer */
+    /* sidebar becomes TOP BAR, not floating chaos */
     .sidebar {
-        position: fixed;
-        top: 0;
-        left: -260px;
+        position: relative;
+        width: 100%;
+        height: auto;
 
-        height: 100%;
-        width: 240px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
 
-        z-index: 1500;
+        border-radius: 18px;
 
-        border-radius: 0 20px 20px 0;
+        margin-bottom: 20px;
     }
 
-    /* open state */
-    .menu-toggle:checked ~ .sidebar {
-        left: 0;
+    .sidebar h3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar a {
+        flex: 1;
+        text-align: center;
+        min-width: 90px;
     }
 
     .grid {
@@ -270,6 +235,5 @@ button:hover {
         width: 100%;
         max-width: 320px;
         margin: 10px auto;
-        display: block;
     }
 }
