@@ -6,7 +6,12 @@ body {
     margin-left: 240px;
     padding: 25px;
     max-width: 900px;
-    line-height: 1.6;
+    line-height: 1.6
+
+}
+
+body {
+    background-image: radial-gradient(circle at top, #e6fbff, #d9f3f6);
 }
 
 /* 🐟 SIDEBAR */
