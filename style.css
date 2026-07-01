@@ -1,51 +1,52 @@
 /* =========================
-   🐚 MOSSY CORAL REEF UI v3 (CLEAN RESET)
+   🌊 MOSSY CORAL REEF UI v3
    ========================= */
 
 :root {
-    /* 🌊 Coral Reef Palette (FINAL) */
-    --orchid: #cda4de;
-    --coral: #ff6f7d;
-    --tangerine: #ffb36a;
-    --amber: #ffd38a;
-    --lagoon: #3fa7a3;
-    --abyss: #16313f;
-    --deep: #1b3f4a;
-    --lilac: #b7a6ff;
-    --shell: #fff7ff;
-
-    --text: #2a3f4a;
+    /* 🌈 Coral Reef Palette (ONLY COLORS USED NOW) */
+    --orchid: #cda4de;      /* Orchid Dream */
+    --coral: #ff7f7f;       /* Coral Kiss */
+    --tangerine: #ffb26b;   /* Tangerine Tide */
+    --amber: #ffd27f;       /* Sunlit Amber */
+    --lagoon: #4aa6a6;      /* Lagoon Depths */
+    --abyss: #1b2f3a;       /* Ocean Abyss */
+    --lilac: #b9a7ff;       /* Moonlit Lilac */
+    --shell: #f7f3ff;       /* Shell Glow */
 }
 
 /* =========================
-   🌊 BASE
+   🌊 BASE LAYOUT
    ========================= */
 
 body {
     margin: 0;
     padding: 25px;
     padding-left: 260px;
-
     max-width: 900px;
     margin-inline: auto;
 
-    font-family: "Poppins", "Nunito", Arial, sans-serif;
+    background: radial-gradient(circle at top,
+        var(--shell),
+        #eaf7ff 60%,
+        #e7f3f2
+    );
+
+    color: var(--abyss);
+
+    font-family: "Nunito", "Poppins", Arial, sans-serif;
     line-height: 1.6;
-
-    color: var(--text);
-
-    background: linear-gradient(180deg, #fff7ff, #eefcff 60%, #e8f7f4);
 }
 
 /* =========================
-   🐠 HEADINGS
+   🌸 HEADERS (soft + rounded feel)
    ========================= */
 
 h1 {
-    text-align: center;
-    color: var(--deep);
     font-weight: 700;
+    color: var(--abyss);
+    text-align: center;
     letter-spacing: 0.5px;
+    text-shadow: 0 0 12px rgba(185,167,255,0.35);
 }
 
 h2 {
@@ -53,7 +54,7 @@ h2 {
 }
 
 /* =========================
-   🪸 DESKTOP SIDEBAR (FIXED)
+   🪸 SIDEBAR (DESKTOP)
    ========================= */
 
 .sidebar {
@@ -62,9 +63,14 @@ h2 {
     top: 18px;
     bottom: 18px;
 
-    width: 200px;
+    width: 210px;
 
-    background: linear-gradient(180deg, var(--deep), var(--abyss));
+    background: linear-gradient(
+        180deg,
+        var(--abyss),
+        #223c47
+    );
+
     border-radius: 22px;
 
     padding: 18px;
@@ -79,44 +85,44 @@ h2 {
 .sidebar h3 {
     color: var(--shell);
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .sidebar a {
-    color: #d7f3ff;
     text-decoration: none;
+    color: var(--shell);
 
     padding: 10px 12px;
     border-radius: 14px;
 
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.06);
 
     transition: 0.2s ease;
 }
 
 .sidebar a:hover {
-    background: var(--lagoon);
+    background: linear-gradient(90deg, var(--lagoon), var(--coral));
     transform: translateX(4px);
 }
 
 /* =========================
-   🫧 PANELS
+   🫧 PANELS (glass coral reef bubbles)
    ========================= */
 
 .panel {
     background: rgba(255,255,255,0.7);
-    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.4);
 
     padding: 18px;
     margin: 16px 0;
 
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    border-radius: 20px;
 
-    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(27,47,58,0.12);
 }
 
 /* =========================
-   🧭 CARDS
+   🧭 CARDS (reef tiles)
    ========================= */
 
 .grid {
@@ -129,7 +135,12 @@ h2 {
     flex: 1;
     min-width: 200px;
 
-    background: linear-gradient(135deg, var(--deep), var(--lagoon));
+    background: linear-gradient(
+        135deg,
+        var(--lagoon),
+        var(--abyss)
+    );
+
     color: var(--shell);
 
     padding: 16px;
@@ -137,14 +148,18 @@ h2 {
 
     text-decoration: none;
 
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-
     transition: 0.25s ease;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .card:hover {
-    transform: translateY(-5px) scale(1.03);
-    background: linear-gradient(135deg, var(--lagoon), var(--coral));
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(
+        135deg,
+        var(--coral),
+        var(--tangerine)
+    );
 }
 
 .card p {
@@ -153,11 +168,16 @@ h2 {
 }
 
 /* =========================
-   🔘 BUTTONS
+   🔘 BUTTONS (bubble-soft)
    ========================= */
 
 button {
-    background: linear-gradient(135deg, var(--coral), var(--tangerine));
+    background: linear-gradient(
+        135deg,
+        var(--coral),
+        var(--tangerine)
+    );
+
     color: white;
 
     border: none;
@@ -169,11 +189,16 @@ button {
 
     transition: 0.2s ease;
 
-    box-shadow: 0 6px 14px rgba(255,111,125,0.25);
+    box-shadow: 0 8px 16px rgba(255,127,127,0.25);
 }
 
 button:hover {
     transform: scale(1.05);
+    background: linear-gradient(
+        135deg,
+        var(--tangerine),
+        var(--orchid)
+    );
 }
 
 /* =========================
@@ -184,6 +209,7 @@ button:hover {
     position: fixed;
     inset: 0;
     pointer-events: none;
+    overflow: hidden;
 }
 
 .bubble {
@@ -195,8 +221,8 @@ button:hover {
 }
 
 .bubble:nth-child(1) { left: 10%; animation-delay: 0s; }
-.bubble:nth-child(2) { left: 35%; animation-delay: 2s; }
-.bubble:nth-child(3) { left: 60%; animation-delay: 4s; }
+.bubble:nth-child(2) { left: 35%; animation-delay: 4s; }
+.bubble:nth-child(3) { left: 60%; animation-delay: 2s; }
 .bubble:nth-child(4) { left: 80%; animation-delay: 6s; }
 
 @keyframes rise {
@@ -206,7 +232,7 @@ button:hover {
 }
 
 /* =========================
-   📱 MOBILE FIX (NO STICKY BUG, NO SCROLL SIDEBAR)
+   📱 MOBILE FIX (REAL FIX)
    ========================= */
 
 @media (max-width: 768px) {
@@ -214,26 +240,29 @@ button:hover {
     body {
         padding: 15px;
         padding-left: 15px;
-        max-width: 100%;
     }
 
-    /* 🚫 KILL FIXED SIDEBAR BEHAVIOUR */
+    /* 🧠 KEY FIX:
+       Sidebar is NO LONGER scrolling OR breaking layout
+       It becomes a FLOATING TOP BAR */
     .sidebar {
-        position: relative; /* IMPORTANT: stops scroll-follow bug */
+        position: sticky;
+        top: 10px;
 
         width: auto;
         height: auto;
-
-        margin: 10px;
-        padding: 12px;
-
-        border-radius: 18px;
 
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
 
         gap: 8px;
+
+        border-radius: 18px;
+
+        z-index: 999;
+
+        padding: 10px;
     }
 
     .sidebar h3 {
