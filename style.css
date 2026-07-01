@@ -67,6 +67,15 @@ body {
     border-radius: 14px;
     text-decoration: none;
     transition: 0.2s;
+
+    .card {
+    box-shadow: 0 6px 14px rgba(47, 111, 133, 0.15);
+}
+
+.card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 18px rgba(74, 144, 164, 0.5);
+}
 }
 
 .card:hover {
