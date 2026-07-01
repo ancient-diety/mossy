@@ -1,9 +1,10 @@
 body {
-    background-color: #f0fff4; /* honeydew */
-    color: #7a86a8; /* wisteria-blue toned soft text */
+    background-color: #d9f3f6; /* pastel light blue */
+    color: #4f7d8a; /* soft steel blue text */
     font-family: Arial, sans-serif;
+
     margin-left: 240px;
-    padding: 20px;
+    padding: 25px;
     max-width: 900px;
     line-height: 1.6;
 }
@@ -15,40 +16,39 @@ body {
     top: 0;
     width: 180px;
     height: 100%;
-    background-color: #b8e7f0; /* light cyan */
+    background-color: #1f4e5f; /* deep teal */
     padding: 20px;
     text-align: left;
-    box-shadow: 2px 0 12px rgba(123, 104, 238, 0.15);
 }
 
 .sidebar h3 {
-    color: #5b6cff; /* medium slate blue */
+    color: #d9f3f6; /* pastel light blue */
     margin-bottom: 15px;
 }
 
 .sidebar a {
     display: block;
-    color: #6f7fd1; /* frosted blue */
+    color: #8fbfd4; /* vista blue */
     text-decoration: none;
     margin: 10px 0;
-    padding: 6px;
+    padding: 8px;
     border-radius: 10px;
     transition: 0.2s;
 }
 
 .sidebar a:hover {
-    background-color: #7b68ee; /* medium slate blue */
-    color: white;
+    background-color: #4a90a4; /* lagoon */
+    color: #ffffff;
 }
 
 /* 🧊 PANELS */
 .panel {
-    background-color: rgba(184, 231, 240, 0.35); /* light cyan glass */
-    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.65);
+    padding: 18px;
     border-radius: 14px;
     margin: 16px 0;
-    box-shadow: 0 6px 18px rgba(123, 104, 238, 0.12);
-    border: 1px solid rgba(123, 104, 238, 0.15);
+    box-shadow: 0 6px 16px rgba(31, 78, 95, 0.15);
+    border: 1px solid rgba(79, 125, 138, 0.1);
 }
 
 /* 🧭 GRID */
@@ -61,45 +61,30 @@ body {
 .card {
     flex: 1;
     min-width: 200px;
-    background-color: #7b68ee; /* medium slate blue */
-    color: #f0fff4; /* honeydew text */
+    background-color: #2f6f85; /* steel blue */
+    color: #d9f3f6;
     padding: 15px;
     border-radius: 14px;
     text-decoration: none;
     transition: 0.2s;
-    box-shadow: 0 4px 12px rgba(123, 104, 238, 0.2);
 }
 
 .card:hover {
     transform: scale(1.05);
-    background-color: #6f7fd1; /* frosted blue */
+    background-color: #4a90a4; /* lagoon */
 }
 
 .card p {
-    color: #d9f7ff; /* light cyan tint */
+    color: #b9e3f2; /* softer vista blue */
     font-size: 0.9em;
 }
 
 /* optional polish */
 h1 {
-    color: #5b6cff;
+    color: #1f4e5f; /* deep teal */
+    text-shadow: 0 0 8px rgba(143, 191, 212, 0.4);
 }
 
 h2 {
-    color: #6f7fd1;
-}
-
-button {
-    background-color: #7b68ee;
-    color: #f0fff4;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-button:hover {
-    background-color: #5b6cff;
-    transform: scale(1.05);
+    color: #2f6f85; /* steel blue */
 }
