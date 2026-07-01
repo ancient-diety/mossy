@@ -1,9 +1,11 @@
 body {
-    background-color: #d6f1ff;
-    color: #6f85a8;
+    background-color: #f0fff4; /* honeydew */
+    color: #7a86a8; /* wisteria-blue toned soft text */
     font-family: Arial, sans-serif;
-    margin-left: 200px;
+    margin-left: 240px;
     padding: 20px;
+    max-width: 900px;
+    line-height: 1.6;
 }
 
 /* 🐟 SIDEBAR */
@@ -13,37 +15,40 @@ body {
     top: 0;
     width: 180px;
     height: 100%;
-    background-color: #2b3a67;
+    background-color: #b8e7f0; /* light cyan */
     padding: 20px;
     text-align: left;
+    box-shadow: 2px 0 12px rgba(123, 104, 238, 0.15);
 }
 
 .sidebar h3 {
-    color: #d6f1ff;
+    color: #5b6cff; /* medium slate blue */
     margin-bottom: 15px;
 }
 
 .sidebar a {
     display: block;
-    color: #a3c4ff;
+    color: #6f7fd1; /* frosted blue */
     text-decoration: none;
     margin: 10px 0;
     padding: 6px;
-    border-radius: 8px;
+    border-radius: 10px;
+    transition: 0.2s;
 }
 
 .sidebar a:hover {
-    background-color: #716cff;
+    background-color: #7b68ee; /* medium slate blue */
     color: white;
 }
 
 /* 🧊 PANELS */
 .panel {
-    background-color: rgba(255, 255, 255, 0.55);
-    padding: 15px;
-    border-radius: 12px;
-    margin: 15px 0;
-    box-shadow: 0 4px 12px rgba(43, 58, 103, 0.15);
+    background-color: rgba(184, 231, 240, 0.35); /* light cyan glass */
+    padding: 16px;
+    border-radius: 14px;
+    margin: 16px 0;
+    box-shadow: 0 6px 18px rgba(123, 104, 238, 0.12);
+    border: 1px solid rgba(123, 104, 238, 0.15);
 }
 
 /* 🧭 GRID */
@@ -56,20 +61,45 @@ body {
 .card {
     flex: 1;
     min-width: 200px;
-    background-color: #2b3a67;
-    color: #d6f1ff;
+    background-color: #7b68ee; /* medium slate blue */
+    color: #f0fff4; /* honeydew text */
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 14px;
     text-decoration: none;
     transition: 0.2s;
+    box-shadow: 0 4px 12px rgba(123, 104, 238, 0.2);
 }
 
 .card:hover {
     transform: scale(1.05);
-    background-color: #3b4d85;
+    background-color: #6f7fd1; /* frosted blue */
 }
 
 .card p {
-    color: #a3c4ff;
+    color: #d9f7ff; /* light cyan tint */
     font-size: 0.9em;
+}
+
+/* optional polish */
+h1 {
+    color: #5b6cff;
+}
+
+h2 {
+    color: #6f7fd1;
+}
+
+button {
+    background-color: #7b68ee;
+    color: #f0fff4;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #5b6cff;
+    transform: scale(1.05);
 }
