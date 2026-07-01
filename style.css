@@ -88,3 +88,30 @@ h1 {
 h2 {
     color: #2f6f85; /* steel blue */
 }
+
+.bubbles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    font-size: 22px;
+    opacity: 0;
+    animation: rise 6s infinite ease-in;
+}
+
+/* random positions + delays */
+.bubble:nth-child(1) { left: 10%; animation-delay: 0s; }
+.bubble:nth-child(2) { left: 35%; animation-delay: 1.5s; }
+.bubble:nth-child(3) { left: 60%; animation-delay: 3s; }
+.bubble:nth-child(4) { left: 85%; animation-delay: 4.5s; }
+
+@keyframes rise {
+    0%   { transform: translateY(0); opacity: 0; }
+    10%  { opacity: 1; }
+    100% { transform: translateY(-800px); opacity: 0; }
+}
