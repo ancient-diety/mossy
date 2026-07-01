@@ -119,3 +119,30 @@ h2 {
     10% { opacity: 1; }
     100% { transform: translateY(-800px); opacity: 0; }
 }
+
+/* 📱 Mobile Layout */
+@media (max-width: 768px) {
+
+    body {
+        margin-left: 0;
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .sidebar {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .grid {
+        flex-direction: column;
+    }
+
+    .card {
+        min-width: auto;
+    }
+
+}
