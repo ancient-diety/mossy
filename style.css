@@ -1,52 +1,55 @@
 /* =========================
-   🌸 MOSSY CORAL REEF v3
+   🌸 MOSSY REEF v4 (CLEAN)
    ========================= */
 
 :root {
-    /* 🌺 CORAL REEF PALETTE (FINAL) */
-    --orchid: #cda4de;
-    --coral: #ff7f7f;
-    --tangerine: #ffb26b;
-    --amber: #ffd27f;
-    --lilac: #b9a7ff;
-    --shell: #fff6ff;
-    --deep: #1f4e5f;
-    --ink: #24424d;
+    /* 🌈 NEW PALETTE */
+    --phlox: #d96bff;
+    --verbena: #a78bfa;
+    --periwinkle: #8fb8ff;
+    --atlantis: #bff6c6;   /* PRIMARY BACKGROUND */
+    --phthalo: #1f3a93;
+
+    --text: #1f2f3a;
+    --glass: rgba(255,255,255,0.65);
 }
 
 /* =========================
-   🌊 BASE LAYOUT
+   🌊 BASE
    ========================= */
 
 body {
     margin: 0;
     padding: 25px;
-    padding-left: 280px;
+    padding-left: 270px;
 
     max-width: 900px;
     margin-inline: auto;
 
-    background: radial-gradient(circle at top, #fff7fb, #f1fbff 60%, #fff3e6);
-    color: var(--ink);
-
     font-family: "Poppins", "Nunito", Arial, sans-serif;
     line-height: 1.6;
-}
 
-/* 🐠 Titles */
-h1 {
-    text-align: center;
-    color: var(--deep);
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(205,164,222,0.3);
-}
+    color: var(--text);
 
-h2 {
-    color: var(--coral);
+    background: radial-gradient(circle at top, var(--atlantis), #e9fff1 60%, #f5fbff);
 }
 
 /* =========================
-   🪸 SIDEBAR (DESKTOP FIXED + ORCHID ERA)
+   🐠 TITLES
+   ========================= */
+
+h1 {
+    text-align: center;
+    color: var(--phthalo);
+    text-shadow: 0 0 10px rgba(143,184,255,0.5);
+}
+
+h2 {
+    color: var(--phlox);
+}
+
+/* =========================
+   🪸 SIDEBAR (DESKTOP)
    ========================= */
 
 .sidebar {
@@ -55,9 +58,9 @@ h2 {
     top: 16px;
     bottom: 16px;
 
-    width: 220px;
+    width: 230px;
 
-    background: linear-gradient(180deg, var(--orchid), var(--lilac));
+    background: linear-gradient(180deg, var(--phthalo), #2c4fb0);
     border-radius: 22px;
 
     padding: 18px;
@@ -66,29 +69,207 @@ h2 {
     flex-direction: column;
     gap: 10px;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 
-    z-index: 1000;
+    transition: 0.3s ease;
 }
 
 .sidebar h3 {
-    color: var(--shell);
+    color: white;
     text-align: center;
 }
 
 .sidebar a {
     text-decoration: none;
-    color: #ffffff;
+    color: white;
 
     padding: 10px 12px;
-    border-radius: 14px;
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.08);
 
     transition: 0.2s ease;
-
-    background: rgba(255,255,255,0.12);
 }
 
 .sidebar a:hover {
-    background: var(--coral);
-    transform: translateX(5px);
+    background: var(--verbena);
+    transform: translateX(4px);
+}
+
+/* =========================
+   🫧 PANELS
+   ========================= */
+
+.panel {
+    background: var(--glass);
+    border-radius: 20px;
+
+    padding: 18px;
+    margin: 18px 0;
+
+    box-shadow: 0 8px 20px rgba(31,58,147,0.12);
+}
+
+/* =========================
+   🧭 CARDS
+   ========================= */
+
+.grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 200px;
+
+    background: linear-gradient(135deg, var(--phthalo), var(--periwinkle));
+    color: white;
+
+    padding: 16px;
+    border-radius: 22px;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+
+    box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(135deg, var(--phlox), var(--verbena));
+}
+
+/* =========================
+   🔘 BUTTONS (CIRCULAR PEARL STYLE)
+   ========================= */
+
+button {
+    background: linear-gradient(135deg, var(--phlox), var(--periwinkle));
+    color: white;
+
+    border: none;
+    border-radius: 999px;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, var(--verbena), var(--phthalo));
+}
+
+/* =========================
+   🫧 BUBBLES (ENHANCED BUT SAFE)
+   ========================= */
+
+.bubbles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    font-size: 22px;
+    opacity: 0;
+    animation: rise 7s infinite ease-in;
+}
+
+.bubble:nth-child(1) { left: 10%; animation-delay: 0s; }
+.bubble:nth-child(2) { left: 25%; animation-delay: 1.5s; }
+.bubble:nth-child(3) { left: 40%; animation-delay: 3s; }
+.bubble:nth-child(4) { left: 60%; animation-delay: 4.5s; }
+.bubble:nth-child(5) { left: 80%; animation-delay: 6s; }
+
+@keyframes rise {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(-900px); opacity: 0; }
+}
+
+/* =========================
+   📱 MOBILE FIX (REAL DRAWER)
+   ========================= */
+
+/* toggle hidden checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* hamburger button */
+.menu-button {
+    display: none;
+    position: fixed;
+    top: 14px;
+    left: 14px;
+
+    z-index: 2000;
+
+    background: var(--phthalo);
+    color: white;
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 10px 12px;
+
+    cursor: pointer;
+}
+
+/* MOBILE MODE */
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+        padding-left: 15px;
+        max-width: 100%;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    /* sidebar becomes hidden drawer */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px;
+
+        height: 100%;
+        width: 240px;
+
+        z-index: 1500;
+
+        border-radius: 0 20px 20px 0;
+    }
+
+    /* open state */
+    .menu-toggle:checked ~ .sidebar {
+        left: 0;
+    }
+
+    .grid {
+        flex-direction: column;
+    }
+
+    .card {
+        min-width: auto;
+    }
+
+    button {
+        width: 100%;
+        max-width: 320px;
+        margin: 10px auto;
+        display: block;
+    }
 }
