@@ -1,17 +1,16 @@
 /* =========================
-   🌊 MOSSY CORAL REEF UI v3
+   🐚 MOSSY CORAL REEF UI v3
    ========================= */
 
+/* 🌸 CORE PALETTE (ONLY COLORS USED) */
 :root {
-    /* 🌈 Coral Reef Palette (ONLY COLORS USED NOW) */
-    --orchid: #cda4de;      /* Orchid Dream */
-    --coral: #ff7f7f;       /* Coral Kiss */
-    --tangerine: #ffb26b;   /* Tangerine Tide */
-    --amber: #ffd27f;       /* Sunlit Amber */
-    --lagoon: #4aa6a6;      /* Lagoon Depths */
-    --abyss: #1b2f3a;       /* Ocean Abyss */
-    --lilac: #b9a7ff;       /* Moonlit Lilac */
-    --shell: #f7f3ff;       /* Shell Glow */
+    --orchid: #cda4de;      /* soft dreamy purple */
+    --coral: #ff7f7f;       /* coral kiss */
+    --tangerine: #ffb26b;   /* warm tide orange */
+    --amber: #ffd27f;       /* sunlit glow */
+    --lilac: #b9a7ff;       /* moonlit accent */
+    --shell: #fff6ff;       /* shell glow background */
+    --text: #3b3a4a;        /* soft readable dark */
 }
 
 /* =========================
@@ -20,41 +19,34 @@
 
 body {
     margin: 0;
-    padding: 25px;
-    padding-left: 260px;
+    padding: 24px;
+
     max-width: 900px;
     margin-inline: auto;
 
-    background: radial-gradient(circle at top,
-        var(--shell),
-        #eaf7ff 60%,
-        #e7f3f2
-    );
-
-    color: var(--abyss);
+    background: radial-gradient(circle at top, #fff6ff, #ffeef3, #fff1e6);
+    color: var(--text);
 
     font-family: "Nunito", "Poppins", Arial, sans-serif;
     line-height: 1.6;
+
+    padding-left: 260px; /* desktop sidebar space */
 }
 
-/* =========================
-   🌸 HEADERS (soft + rounded feel)
-   ========================= */
-
+/* 🐠 Titles */
 h1 {
-    font-weight: 700;
-    color: var(--abyss);
     text-align: center;
-    letter-spacing: 0.5px;
-    text-shadow: 0 0 12px rgba(185,167,255,0.35);
+    color: var(--coral);
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255,127,127,0.25);
 }
 
 h2 {
-    color: var(--lagoon);
+    color: var(--tangerine);
 }
 
 /* =========================
-   🪸 SIDEBAR (DESKTOP)
+   🪸 SIDEBAR (DESKTOP ONLY)
    ========================= */
 
 .sidebar {
@@ -65,69 +57,64 @@ h2 {
 
     width: 210px;
 
-    background: linear-gradient(
-        180deg,
-        var(--abyss),
-        #223c47
-    );
-
+    background: linear-gradient(180deg, var(--coral), var(--orchid));
     border-radius: 22px;
 
-    padding: 18px;
+    padding: 16px;
 
     display: flex;
     flex-direction: column;
     gap: 10px;
 
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 .sidebar h3 {
-    color: var(--shell);
+    color: white;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .sidebar a {
     text-decoration: none;
-    color: var(--shell);
+    color: white;
 
     padding: 10px 12px;
     border-radius: 14px;
 
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.15);
 
     transition: 0.2s ease;
 }
 
 .sidebar a:hover {
-    background: linear-gradient(90deg, var(--lagoon), var(--coral));
+    background: var(--tangerine);
     transform: translateX(4px);
 }
 
 /* =========================
-   🫧 PANELS (glass coral reef bubbles)
+   🫧 PANELS (GLASSY REEF)
    ========================= */
 
 .panel {
-    background: rgba(255,255,255,0.7);
-    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.75);
+    border-radius: 18px;
 
     padding: 18px;
     margin: 16px 0;
 
-    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255,127,127,0.12);
 
-    box-shadow: 0 10px 25px rgba(27,47,58,0.12);
+    border: 1px solid rgba(255,182,107,0.2);
 }
 
 /* =========================
-   🧭 CARDS (reef tiles)
+   🧭 CARDS
    ========================= */
 
 .grid {
     display: flex;
-    gap: 15px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
@@ -135,49 +122,34 @@ h2 {
     flex: 1;
     min-width: 200px;
 
-    background: linear-gradient(
-        135deg,
-        var(--lagoon),
-        var(--abyss)
-    );
-
-    color: var(--shell);
+    background: linear-gradient(135deg, var(--coral), var(--orchid));
+    color: white;
 
     padding: 16px;
-    border-radius: 18px;
+    border-radius: 20px;
 
     text-decoration: none;
 
     transition: 0.25s ease;
 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 .card:hover {
     transform: translateY(-4px) scale(1.03);
-    background: linear-gradient(
-        135deg,
-        var(--coral),
-        var(--tangerine)
-    );
+    background: linear-gradient(135deg, var(--tangerine), var(--coral));
 }
 
 .card p {
     color: rgba(255,255,255,0.85);
-    font-size: 0.9rem;
 }
 
 /* =========================
-   🔘 BUTTONS (bubble-soft)
+   🔘 BUTTONS (soft coral pills)
    ========================= */
 
 button {
-    background: linear-gradient(
-        135deg,
-        var(--coral),
-        var(--tangerine)
-    );
-
+    background: linear-gradient(135deg, var(--coral), var(--tangerine));
     color: white;
 
     border: none;
@@ -194,11 +166,7 @@ button {
 
 button:hover {
     transform: scale(1.05);
-    background: linear-gradient(
-        135deg,
-        var(--tangerine),
-        var(--orchid)
-    );
+    background: linear-gradient(135deg, var(--tangerine), var(--lilac));
 }
 
 /* =========================
@@ -214,16 +182,16 @@ button:hover {
 
 .bubble {
     position: absolute;
-    bottom: -50px;
+    bottom: -60px;
     font-size: 22px;
     opacity: 0;
     animation: rise 7s infinite ease-in;
 }
 
 .bubble:nth-child(1) { left: 10%; animation-delay: 0s; }
-.bubble:nth-child(2) { left: 35%; animation-delay: 4s; }
-.bubble:nth-child(3) { left: 60%; animation-delay: 2s; }
-.bubble:nth-child(4) { left: 80%; animation-delay: 6s; }
+.bubble:nth-child(2) { left: 35%; animation-delay: 2s; }
+.bubble:nth-child(3) { left: 60%; animation-delay: 1s; }
+.bubble:nth-child(4) { left: 80%; animation-delay: 3s; }
 
 @keyframes rise {
     0% { transform: translateY(0); opacity: 0; }
@@ -238,42 +206,45 @@ button:hover {
 @media (max-width: 768px) {
 
     body {
-        padding: 15px;
-        padding-left: 15px;
+        padding: 16px;
+        max-width: 100%;
     }
 
-    /* 🧠 KEY FIX:
-       Sidebar is NO LONGER scrolling OR breaking layout
-       It becomes a FLOATING TOP BAR */
+    /* 🐚 MOBILE NAV = FIXED BOTTOM BAR (NO SCROLL BUG) */
     .sidebar {
-        position: sticky;
-        top: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
 
-        width: auto;
+        top: auto;
         height: auto;
 
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
 
-        gap: 8px;
-
-        border-radius: 18px;
-
-        z-index: 999;
+        border-radius: 20px 20px 0 0;
 
         padding: 10px;
+
+        z-index: 999;
     }
 
     .sidebar h3 {
-        width: 100%;
-        text-align: center;
+        display: none; /* cleaner mobile nav */
     }
 
     .sidebar a {
         flex: 1;
         text-align: center;
-        padding: 8px;
+        padding: 10px 6px;
+        font-size: 0.85rem;
+    }
+
+    /* prevent content hiding behind nav */
+    body {
+        padding-bottom: 80px;
     }
 
     .grid {
