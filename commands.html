@@ -1,62 +1,155 @@
-<div class="sidebar">
-    <h3>🐟 Mossy Menu</h3>
+<!DOCTYPE html>
+<html>
 
-    <a href="index.html">🏠 Home</a>
-    <a href="changelog.html">📜 Changelog</a>
-    <a href="commands.html">🤖 Commands</a>
-</div>
+<head>
+    <title>Mossy Commands 🐟</title>
 
-<h1>Mossy Commands 🐟</h1>
+    <style>
+        body {
+            background-color: #d6f1ff;
+            color: #8aa0c6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-left: 240px;
+        }
 
-<p>Everything Mossy can currently do!</p>
+        h1 {
+            color: #2b3a67;
+            text-shadow: 0 0 8px #a3c4ff;
+        }
 
-<h2>💬 Basic Commands</h2>
+        h2 {
+            color: #2b3a67;
+            margin-top: 35px;
+        }
 
-<p><b>!hello</b> - Mossy says hello!</p>
+        p {
+            color: #6f85a8;
+            line-height: 1.6;
+        }
 
-<p><b>!moss</b> - Mossy reacts based on his current mood.</p>
+        b {
+            color: #2b3a67;
+        }
 
-<p><b>!think</b> - Random fishy thoughts.</p>
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #a3c4ff;
+            margin: 30px auto;
+            width: 80%;
+        }
 
-<p><b>!mood</b> - Shows Mossy's current mood.</p>
+        /* 🐟 SIDEBAR */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #2b3a67;
+            padding: 20px;
+            text-align: left;
+        }
 
-<p><b>!changemood</b> - Gives Mossy a new mood.</p>
+        .sidebar h3 {
+            color: #d6f1ff;
+            margin-bottom: 15px;
+        }
 
-<hr>
+        .sidebar a {
+            display: block;
+            color: #a3c4ff;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 6px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
 
-<h2>🫧 Fun Commands</h2>
+        .sidebar a:hover {
+            background-color: #716cff;
+            color: white;
+        }
 
-<p><b>!bubble</b> - Creates bubbles.</p>
+        /* 🫧 Bubble */
+        .bubble {
+            font-size: 24px;
+            position: fixed;
+            bottom: -40px;
+            left: 50%;
+            animation: rise 4s linear infinite;
+            opacity: 0;
+        }
 
-<p><b>!feed</b> - Feed Mossy.</p>
+        @keyframes rise {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
 
-<p><b>!nap</b> - Lets Mossy nap.</p>
+            100% {
+                transform: translateY(-600px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
 
-<hr>
+<body>
 
-<h2>💚 Friendship</h2>
+    <div class="sidebar">
+        <h3>🐟 Mossy Menu</h3>
 
-<p><b>!petmossy</b> - Pet Mossy.</p>
+        <a href="index.html">🏠 Home</a>
+        <a href="changelog.html">📜 Changelog</a>
+        <a href="commands.html">🤖 Commands</a>
+    </div>
 
-<p><b>!talk</b> - Chat with Mossy.</p>
+    <h1>🐟 Mossy Commands</h1>
 
-<p><b>!pets</b> - Shows friendship.</p>
+    <p>Everything Mossy can currently do!</p>
 
-<p><b>!level</b> - Shows your level and XP.</p>
+    <hr>
 
-<hr>
+    <h2>💬 Basic Commands</h2>
 
-<h2>🐟 Automatic Triggers</h2>
+    <p><b>!hello</b> - Mossy says hello!</p>
+    <p><b>!moss</b> - Mossy reacts based on his current mood.</p>
+    <p><b>!think</b> - Random fishy thoughts.</p>
+    <p><b>!mood</b> - Shows Mossy's current mood.</p>
+    <p><b>!changemood</b> - Gives Mossy a new mood.</p>
 
-<p><b>"mossy"</b> - Mossy might randomly reply.</p>
+    <hr>
 
-<p><b>"hi mossy"</b> - Mossy gets excited.</p>
+    <h2>🫧 Fun Commands</h2>
 
-<p><b>"hello mossy"</b> - Friendly greeting.</p>
+    <p><b>!bubble</b> - Creates bubbles.</p>
+    <p><b>!feed</b> - Feed Mossy.</p>
+    <p><b>!nap</b> - Lets Mossy nap.</p>
 
-<p><b>"hey mossy"</b> - Friendly greeting.</p>
+    <hr>
 
-<p><b>"hai mossy"</b> - Friendly greeting.</p>
+    <h2>💚 Friendship Commands</h2>
 
-<p><b>Rowan saying "I'm alive"</b> - Mossy celebrates Rowan returning.</p>
+    <p><b>!petmossy</b> - Pet Mossy.</p>
+    <p><b>!talk</b> - Chat with Mossy.</p>
+    <p><b>!pets</b> - Shows your friendship.</p>
+    <p><b>!level</b> - Shows your current level and XP.</p>
 
+    <hr>
+
+    <h2>🐟 Automatic Triggers</h2>
+
+    <p><b>"mossy"</b> - Mossy might randomly reply.</p>
+    <p><b>"hi mossy"</b> - Mossy gets excited.</p>
+    <p><b>"hello mossy"</b> - Friendly greeting.</p>
+    <p><b>"hey mossy"</b> - Friendly greeting.</p>
+    <p><b>"hai mossy"</b> - Friendly greeting.</p>
+    <p><b>Rowan saying "I'm alive"</b> - Mossy celebrates Rowan returning.</p>
+
+    <div class="bubble">🫧</div>
+
+</body>
+
+</html>
