@@ -6,10 +6,13 @@
 
     <style>
         body {
-            background-color: #d6f1ff; /* pale blue */
-            color: #8aa0c6; /* darker text */
+            background-color: #d6f1ff;
+            color: #8aa0c6;
             font-family: Arial, sans-serif;
             text-align: center;
+
+            /* IMPORTANT */
+            margin-left: 200px;
         }
 
         h1 {
@@ -25,19 +28,57 @@
             border-radius: 12px;
             cursor: pointer;
             transition: 0.2s;
-}
+        }
 
         button:hover {
             background-color: #716cff;
             border-color: #a3c4ff;
             box-shadow: 0 0 12px #a3c4ff;
             transform: scale(1.05);
-}
+        }
 
+        /* 🐟 SIDEBAR */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 180px;
+            height: 100%;
+            background-color: #2b3a67;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .sidebar h3 {
+            color: #d6f1ff;
+            margin-bottom: 15px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #a3c4ff;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 6px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            background-color: #716cff;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
+
+    <div class="sidebar">
+        <h3>🐟 Mossy Menu</h3>
+
+        <a href="index.html">Home</a>
+        <a href="changelog.html">Changelog</a>
+    </div>
 
     <h1>Mossy's Fish Tank</h1>
 
