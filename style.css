@@ -1,111 +1,150 @@
 /* =========================
-   🌊 Mossy Aquarium UI v2
-   ========================= */
+   🌊 MOSSY GLOBAL THEME
+========================= */
 
-/* 🎨 PALETTE */
-:root {
-    --deep: #1f4e5f;
-    --steel: #2f6f85;
-    --lagoon: #4a90a4;
-    --vista: #8fbfd4;
-    --baby: #d9f3f6;
-    --mist: #eaf9fc;
-}
-
-/* 🐠 BASE */
 body {
-    background-color: var(--baby);
-    background-image: radial-gradient(circle at top, var(--mist), var(--baby));
-    color: #4f7d8a;
-
-    font-family: "Segoe UI", "Arial Rounded MT Bold", Arial, sans-serif;
+    background: radial-gradient(circle at top, #eaf9ff, #d9f3f6);
+    color: #4b6f7a;
+    font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 
     margin-left: 240px;
-    padding: 28px;
-
-    max-width: 900px;
-    margin-right: auto;
-
+    padding: 25px;
+    max-width: 950px;
     line-height: 1.65;
-    transition: all 0.3s ease;
+
+    margin-right: auto;
+    margin-left: auto;
 }
 
-/* 🌊 TITLE */
+/* headings feel softer */
+h1, h2 {
+    font-family: system-ui, "Segoe UI", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
 h1 {
-    color: var(--deep);
-    text-shadow: 0 0 10px rgba(143, 191, 212, 0.5);
+    color: #1f4e5f;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(143, 191, 212, 0.35);
+}
+
+h2 {
+    color: #2f6f85;
+}
+
+/* =========================
+   🐟 SIDEBAR (PC DEFAULT)
+========================= */
+
+.sidebar {
+    position: fixed;
+    left: 18px;
+    top: 18px;
+    width: 190px;
+    height: calc(100% - 36px);
+
+    background: rgba(31, 78, 95, 0.92);
+    backdrop-filter: blur(10px);
+
+    padding: 18px;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.sidebar h3 {
+    color: #eaf9ff;
     text-align: center;
     margin-bottom: 10px;
 }
 
-/* 🧭 SUBHEADINGS */
-h2 {
-    color: var(--steel);
-    margin-top: 28px;
+.sidebar a {
+    display: block;
+    padding: 10px 12px;
+
+    border-radius: 12px;
+    text-decoration: none;
+
+    color: #bfe6f5;
+    transition: 0.2s ease;
 }
 
-/* 🫧 PANELS */
+.sidebar a:hover {
+    background: #4a90a4;
+    color: white;
+    transform: translateX(3px);
+}
+
+/* =========================
+   🧊 PANELS
+========================= */
+
 .panel {
-    background: rgba(255, 255, 255, 0.72);
-    padding: 18px 20px;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(79,125,138,0.12);
+
+    padding: 18px;
+    margin: 16px 0;
+
     border-radius: 18px;
-
-    margin: 16px auto;
-    max-width: 850px;
-
-    box-shadow: 0 10px 22px rgba(31, 78, 95, 0.12);
-    border: 1px solid rgba(143, 191, 212, 0.25);
+    box-shadow: 0 6px 18px rgba(31,78,95,0.12);
 }
 
-/* 🧭 GRID */
+/* =========================
+   🧭 CARDS
+========================= */
+
 .grid {
     display: flex;
-    gap: 16px;
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-/* 🧱 CARDS */
 .card {
     flex: 1;
     min-width: 210px;
 
-    background: var(--steel);
-    color: var(--baby);
+    background: #2f6f85;
+    color: #eaf9ff;
 
     padding: 16px;
     border-radius: 18px;
 
     text-decoration: none;
 
-    box-shadow: 0 10px 20px rgba(47, 111, 133, 0.18);
-
     transition: 0.25s ease;
+    box-shadow: 0 8px 18px rgba(47,111,133,0.18);
 }
 
 .card:hover {
-    transform: translateY(-4px) scale(1.04);
-    background: var(--lagoon);
-    box-shadow: 0 14px 26px rgba(74, 144, 164, 0.35);
+    transform: translateY(-3px) scale(1.03);
+    background: #4a90a4;
 }
 
 .card p {
-    color: var(--vista);
+    color: #cfefff;
     font-size: 0.9em;
 }
 
-/* 🔘 BUTTONS */
+/* =========================
+   🔘 BUTTONS
+========================= */
+
 button {
-    background: var(--deep);
-    color: var(--baby);
+    background: #2f6f85;
+    color: #eaf9ff;
 
     border: none;
     border-radius: 999px;
 
     padding: 10px 18px;
-    margin: 8px auto;
-
-    display: block;
+    margin: 8px;
 
     cursor: pointer;
 
@@ -113,52 +152,14 @@ button {
 }
 
 button:hover {
-    background: var(--lagoon);
+    background: #4a90a4;
     transform: scale(1.05);
 }
 
-/* 🐟 SIDEBAR (DESKTOP) */
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
+/* =========================
+   🫧 BUBBLES (more random feel)
+========================= */
 
-    width: 190px;
-    height: 100vh;
-
-    background: var(--deep);
-    padding: 18px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    border-right: 2px solid rgba(143, 191, 212, 0.2);
-}
-
-.sidebar h3 {
-    color: var(--baby);
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.sidebar a {
-    color: var(--vista);
-    text-decoration: none;
-
-    padding: 10px;
-    border-radius: 12px;
-
-    transition: 0.2s ease;
-    text-align: center;
-}
-
-.sidebar a:hover {
-    background: var(--lagoon);
-    color: white;
-}
-
-/* 🫧 BUBBLES (MORE NATURAL + RANDOM FEEL) */
 .bubbles {
     position: fixed;
     inset: 0;
@@ -166,24 +167,22 @@ button:hover {
     overflow: hidden;
 }
 
-/* 6 bubbles instead of 4 */
 .bubble {
     position: absolute;
     bottom: -60px;
-
-    font-size: 20px;
+    font-size: 22px;
     opacity: 0;
 
-    animation: rise 7s infinite ease-in;
+    animation: rise 6s infinite ease-in;
 }
 
-/* uneven spacing + timing chaos (good chaos) */
-.bubble:nth-child(1) { left: 8%;  animation-delay: 0s; }
-.bubble:nth-child(2) { left: 22%; animation-delay: 1.2s; }
-.bubble:nth-child(3) { left: 41%; animation-delay: 2.7s; }
-.bubble:nth-child(4) { left: 63%; animation-delay: 0.9s; }
-.bubble:nth-child(5) { left: 78%; animation-delay: 3.6s; }
-.bubble:nth-child(6) { left: 92%; animation-delay: 2.1s; }
+/* more chaos = more life ✨ */
+.bubble:nth-child(1) { left: 10%; animation-delay: 0s; }
+.bubble:nth-child(2) { left: 25%; animation-delay: 1.1s; }
+.bubble:nth-child(3) { left: 42%; animation-delay: 2.7s; }
+.bubble:nth-child(4) { left: 63%; animation-delay: 0.6s; }
+.bubble:nth-child(5) { left: 78%; animation-delay: 3.4s; }
+.bubble:nth-child(6) { left: 88%; animation-delay: 1.9s; }
 
 @keyframes rise {
     0%   { transform: translateY(0); opacity: 0; }
@@ -191,49 +190,55 @@ button:hover {
     100% { transform: translateY(-900px); opacity: 0; }
 }
 
-/* 📱 MOBILE (CLEAN + NO BUGGY OVERLAP) */
+/* =========================
+   📱 MOBILE (SAFE MODE)
+========================= */
+
 @media (max-width: 768px) {
 
     body {
-        margin-left: 0;
+        margin: 0;
         padding: 16px;
         max-width: 100%;
     }
 
-    /* 🧊 sidebar becomes a soft top bar instead of broken scroll element */
+    /* sidebar becomes top bar */
     .sidebar {
-        position: relative;
+        position: sticky;
+        top: 0;
+        left: 0;
 
-        width: 100%;
+        width: auto;
         height: auto;
 
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
 
-        border-radius: 18px;
-
+        border-radius: 16px;
         margin-bottom: 18px;
     }
 
+    .sidebar h3 {
+        width: 100%;
+    }
+
     .sidebar a {
-        flex: 1;
-        min-width: 90px;
-        font-size: 0.9em;
+        padding: 8px 10px;
     }
 
     .grid {
         flex-direction: column;
-        align-items: center;
     }
 
     .card {
-        width: 100%;
-        max-width: 420px;
+        min-width: auto;
     }
 
     button {
         width: 100%;
         max-width: 320px;
+        margin: 8px auto;
+        display: block;
     }
 }
