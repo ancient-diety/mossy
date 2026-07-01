@@ -1,16 +1,17 @@
 /* =========================
-   🐚 MOSSY CORAL REEF UI v3
+   🌸 MOSSY CORAL REEF v3
    ========================= */
 
-/* 🌸 CORE PALETTE (ONLY COLORS USED) */
 :root {
-    --orchid: #cda4de;      /* soft dreamy purple */
-    --coral: #ff7f7f;       /* coral kiss */
-    --tangerine: #ffb26b;   /* warm tide orange */
-    --amber: #ffd27f;       /* sunlit glow */
-    --lilac: #b9a7ff;       /* moonlit accent */
-    --shell: #fff6ff;       /* shell glow background */
-    --text: #3b3a4a;        /* soft readable dark */
+    /* 🌺 CORAL REEF PALETTE (FINAL) */
+    --orchid: #cda4de;
+    --coral: #ff7f7f;
+    --tangerine: #ffb26b;
+    --amber: #ffd27f;
+    --lilac: #b9a7ff;
+    --shell: #fff6ff;
+    --deep: #1f4e5f;
+    --ink: #24424d;
 }
 
 /* =========================
@@ -19,81 +20,78 @@
 
 body {
     margin: 0;
-    padding: 24px;
+    padding: 25px;
+    padding-left: 280px;
 
     max-width: 900px;
     margin-inline: auto;
 
-    background: radial-gradient(circle at top, #fff6ff, #ffeef3, #fff1e6);
-    color: var(--text);
+    background: radial-gradient(circle at top, #fff7fb, #f1fbff 60%, #fff3e6);
+    color: var(--ink);
 
-    font-family: "Nunito", "Poppins", Arial, sans-serif;
+    font-family: "Poppins", "Nunito", Arial, sans-serif;
     line-height: 1.6;
-
-    padding-left: 260px; /* desktop sidebar space */
 }
 
 /* 🐠 Titles */
 h1 {
     text-align: center;
-    color: var(--coral);
+    color: var(--deep);
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(255,127,127,0.25);
+    text-shadow: 0 0 10px rgba(205,164,222,0.3);
 }
 
 h2 {
-    color: var(--tangerine);
+    color: var(--coral);
 }
 
 /* =========================
-   🪸 SIDEBAR (DESKTOP ONLY)
+   🪸 SIDEBAR (DESKTOP)
    ========================= */
 
 .sidebar {
     position: fixed;
-    left: 18px;
-    top: 18px;
-    bottom: 18px;
+    left: 16px;
+    top: 16px;
+    bottom: 16px;
 
-    width: 210px;
+    width: 220px;
 
-    background: linear-gradient(180deg, var(--coral), var(--orchid));
+    background: linear-gradient(180deg, var(--deep), #2d5a6a);
     border-radius: 22px;
 
-    padding: 16px;
+    padding: 18px;
 
     display: flex;
     flex-direction: column;
     gap: 10px;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .sidebar h3 {
-    color: white;
+    color: var(--shell);
     text-align: center;
-    margin-bottom: 8px;
 }
 
 .sidebar a {
     text-decoration: none;
-    color: white;
+    color: #f2f2ff;
 
     padding: 10px 12px;
     border-radius: 14px;
 
-    background: rgba(255,255,255,0.15);
-
     transition: 0.2s ease;
+    background: rgba(255,255,255,0.06);
 }
 
 .sidebar a:hover {
-    background: var(--tangerine);
-    transform: translateX(4px);
+    background: var(--coral);
+    transform: translateX(5px);
 }
 
 /* =========================
-   🫧 PANELS (GLASSY REEF)
+   🫧 PANELS
    ========================= */
 
 .panel {
@@ -101,11 +99,10 @@ h2 {
     border-radius: 18px;
 
     padding: 18px;
-    margin: 16px 0;
+    margin: 18px 0;
 
-    box-shadow: 0 8px 20px rgba(255,127,127,0.12);
-
-    border: 1px solid rgba(255,182,107,0.2);
+    box-shadow: 0 8px 20px rgba(31,78,95,0.12);
+    border: 1px solid rgba(255,255,255,0.4);
 }
 
 /* =========================
@@ -114,7 +111,7 @@ h2 {
 
 .grid {
     display: flex;
-    gap: 14px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
@@ -122,22 +119,22 @@ h2 {
     flex: 1;
     min-width: 200px;
 
-    background: linear-gradient(135deg, var(--coral), var(--orchid));
-    color: white;
+    background: linear-gradient(135deg, var(--deep), var(--coral));
+    color: var(--shell);
 
     padding: 16px;
-    border-radius: 20px;
+    border-radius: 18px;
 
     text-decoration: none;
 
     transition: 0.25s ease;
 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 .card:hover {
-    transform: translateY(-4px) scale(1.03);
-    background: linear-gradient(135deg, var(--tangerine), var(--coral));
+    transform: translateY(-5px) scale(1.03);
+    background: linear-gradient(135deg, var(--tangerine), var(--orchid));
 }
 
 .card p {
@@ -145,7 +142,7 @@ h2 {
 }
 
 /* =========================
-   🔘 BUTTONS (soft coral pills)
+   🔘 BUTTONS
    ========================= */
 
 button {
@@ -161,12 +158,11 @@ button {
 
     transition: 0.2s ease;
 
-    box-shadow: 0 8px 16px rgba(255,127,127,0.25);
+    box-shadow: 0 6px 14px rgba(255,127,127,0.25);
 }
 
 button:hover {
     transform: scale(1.05);
-    background: linear-gradient(135deg, var(--tangerine), var(--lilac));
 }
 
 /* =========================
@@ -177,12 +173,11 @@ button:hover {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    overflow: hidden;
 }
 
 .bubble {
     position: absolute;
-    bottom: -60px;
+    bottom: -50px;
     font-size: 22px;
     opacity: 0;
     animation: rise 7s infinite ease-in;
@@ -190,8 +185,8 @@ button:hover {
 
 .bubble:nth-child(1) { left: 10%; animation-delay: 0s; }
 .bubble:nth-child(2) { left: 35%; animation-delay: 2s; }
-.bubble:nth-child(3) { left: 60%; animation-delay: 1s; }
-.bubble:nth-child(4) { left: 80%; animation-delay: 3s; }
+.bubble:nth-child(3) { left: 60%; animation-delay: 4s; }
+.bubble:nth-child(4) { left: 80%; animation-delay: 6s; }
 
 @keyframes rise {
     0% { transform: translateY(0); opacity: 0; }
@@ -200,51 +195,61 @@ button:hover {
 }
 
 /* =========================
-   📱 MOBILE FIX (REAL FIX)
+   📱 MOBILE (HAMBURGER MENU)
    ========================= */
 
+.menu-toggle {
+    display: none;
+}
+
+/* hamburger button */
+.menu-button {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2000;
+
+    background: var(--deep);
+    color: white;
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 10px 14px;
+
+    cursor: pointer;
+}
+
+/* MOBILE SIDEBAR = POP OUT DRAWER */
 @media (max-width: 768px) {
 
     body {
-        padding: 16px;
+        padding: 15px;
+        padding-left: 15px;
         max-width: 100%;
     }
 
-    /* 🐚 MOBILE NAV = FIXED BOTTOM BAR (NO SCROLL BUG) */
+    .menu-button {
+        display: block;
+    }
+
     .sidebar {
         position: fixed;
-        bottom: 0;
+        top: 0;
+        left: -260px;
+
+        height: 100%;
+        width: 240px;
+
+        transition: 0.3s ease;
+
+        z-index: 1500;
+    }
+
+    /* when toggled */
+    .menu-toggle:checked ~ .sidebar {
         left: 0;
-        right: 0;
-
-        top: auto;
-        height: auto;
-
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-
-        border-radius: 20px 20px 0 0;
-
-        padding: 10px;
-
-        z-index: 999;
-    }
-
-    .sidebar h3 {
-        display: none; /* cleaner mobile nav */
-    }
-
-    .sidebar a {
-        flex: 1;
-        text-align: center;
-        padding: 10px 6px;
-        font-size: 0.85rem;
-    }
-
-    /* prevent content hiding behind nav */
-    body {
-        padding-bottom: 80px;
     }
 
     .grid {
