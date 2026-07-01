@@ -1,47 +1,51 @@
 /* =========================
-   🌊 MOSSY REEF THEME v2
+   🐚 MOSSY CORAL REEF UI v3 (CLEAN RESET)
    ========================= */
 
 :root {
-    /* 🌈 New Coral Reef Palette */
+    /* 🌊 Coral Reef Palette (FINAL) */
     --orchid: #cda4de;
-    --coral: #ff7f7f;
-    --tangerine: #ffb26b;
-    --amber: #ffd27f;
-    --lagoon: #4aa6a6;
-    --deep: #1e3f4f;
-    --abyss: #0f1f28;
-    --lilac: #b9a7ff;
-    --shell: #f6f1ff;
+    --coral: #ff6f7d;
+    --tangerine: #ffb36a;
+    --amber: #ffd38a;
+    --lagoon: #3fa7a3;
+    --abyss: #16313f;
+    --deep: #1b3f4a;
+    --lilac: #b7a6ff;
+    --shell: #fff7ff;
 
-    --text: #2e4a57;
+    --text: #2a3f4a;
 }
 
 /* =========================
-   🌊 BASE LAYOUT
+   🌊 BASE
    ========================= */
 
 body {
     margin: 0;
     padding: 25px;
-    padding-left: 260px; /* space for sidebar */
+    padding-left: 260px;
+
     max-width: 900px;
     margin-inline: auto;
 
-    background: radial-gradient(circle at top, #fdf7ff, #eaf7ff 60%, #dff6f2);
-    color: var(--text);
-
     font-family: "Poppins", "Nunito", Arial, sans-serif;
     line-height: 1.6;
+
+    color: var(--text);
+
+    background: linear-gradient(180deg, #fff7ff, #eefcff 60%, #e8f7f4);
 }
 
-/* softer title vibe */
+/* =========================
+   🐠 HEADINGS
+   ========================= */
+
 h1 {
-    font-family: "Poppins", Arial, sans-serif;
-    font-weight: 700;
-    color: var(--deep);
-    text-shadow: 0 0 10px rgba(255, 127, 127, 0.25);
     text-align: center;
+    color: var(--deep);
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 h2 {
@@ -49,7 +53,7 @@ h2 {
 }
 
 /* =========================
-   🪸 SIDEBAR (DESKTOP)
+   🪸 DESKTOP SIDEBAR (FIXED)
    ========================= */
 
 .sidebar {
@@ -60,38 +64,38 @@ h2 {
 
     width: 200px;
 
-    background: linear-gradient(180deg, var(--deep), #244b5c);
-    border-radius: 20px;
+    background: linear-gradient(180deg, var(--deep), var(--abyss));
+    border-radius: 22px;
 
     padding: 18px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
 .sidebar h3 {
     color: var(--shell);
     text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+    margin-bottom: 8px;
 }
 
 .sidebar a {
-    color: #cfefff;
+    color: #d7f3ff;
     text-decoration: none;
 
     padding: 10px 12px;
     border-radius: 14px;
 
-    transition: 0.2s ease;
     background: rgba(255,255,255,0.05);
+
+    transition: 0.2s ease;
 }
 
 .sidebar a:hover {
     background: var(--lagoon);
-    color: white;
     transform: translateX(4px);
 }
 
@@ -100,15 +104,15 @@ h2 {
    ========================= */
 
 .panel {
-    background: rgba(255,255,255,0.75);
-    border: 1px solid rgba(255,255,255,0.4);
-
-    padding: 18px;
-    margin: 18px 0;
-
+    background: rgba(255,255,255,0.7);
     border-radius: 18px;
 
-    box-shadow: 0 8px 20px rgba(30,63,79,0.1);
+    padding: 18px;
+    margin: 16px 0;
+
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 /* =========================
@@ -133,13 +137,13 @@ h2 {
 
     text-decoration: none;
 
-    transition: 0.25s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    transition: 0.25s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px) scale(1.03);
+    transform: translateY(-5px) scale(1.03);
     background: linear-gradient(135deg, var(--lagoon), var(--coral));
 }
 
@@ -149,7 +153,7 @@ h2 {
 }
 
 /* =========================
-   🔘 BUTTONS (soft & round)
+   🔘 BUTTONS
    ========================= */
 
 button {
@@ -165,12 +169,11 @@ button {
 
     transition: 0.2s ease;
 
-    box-shadow: 0 6px 14px rgba(255,127,127,0.25);
+    box-shadow: 0 6px 14px rgba(255,111,125,0.25);
 }
 
 button:hover {
     transform: scale(1.05);
-    background: linear-gradient(135deg, var(--tangerine), var(--orchid));
 }
 
 /* =========================
@@ -181,7 +184,6 @@ button:hover {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    overflow: hidden;
 }
 
 .bubble {
@@ -204,7 +206,7 @@ button:hover {
 }
 
 /* =========================
-   📱 MOBILE (clean + floating sidebar fix)
+   📱 MOBILE FIX (NO STICKY BUG, NO SCROLL SIDEBAR)
    ========================= */
 
 @media (max-width: 768px) {
@@ -215,28 +217,28 @@ button:hover {
         max-width: 100%;
     }
 
-    /* 🫧 FLOATING TOP NAV instead of sidebar */
+    /* 🚫 KILL FIXED SIDEBAR BEHAVIOUR */
     .sidebar {
-        position: sticky;
-        top: 10px;
+        position: relative; /* IMPORTANT: stops scroll-follow bug */
 
         width: auto;
+        height: auto;
+
+        margin: 10px;
+        padding: 12px;
+
+        border-radius: 18px;
+
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
 
-        margin: 10px;
-        padding: 10px;
-
-        border-radius: 16px;
-
-        z-index: 999;
+        gap: 8px;
     }
 
     .sidebar h3 {
         width: 100%;
         text-align: center;
-        margin-bottom: 6px;
     }
 
     .sidebar a {
