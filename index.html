@@ -7,34 +7,15 @@
     <style>
         body {
             background-color: #d6f1ff;
-            color: #8aa0c6;
+            color: #6f85a8;
             font-family: Arial, sans-serif;
-            text-align: center;
-
-            /* IMPORTANT */
-            margin-left: 200px;
+            margin-left: 220px;
+            padding: 20px;
         }
 
         h1 {
             color: #2b3a67;
             text-shadow: 0 0 8px #a3c4ff;
-        }
-
-        button {
-            background-color: #2b3a67;
-            color: #d6f1ff;
-            border: 2px solid #5a7dff;
-            padding: 10px 20px;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        button:hover {
-            background-color: #716cff;
-            border-color: #a3c4ff;
-            box-shadow: 0 0 12px #a3c4ff;
-            transform: scale(1.05);
         }
 
         /* 🐟 SIDEBAR */
@@ -61,7 +42,6 @@
             margin: 10px 0;
             padding: 6px;
             border-radius: 8px;
-            transition: 0.2s;
         }
 
         .sidebar a:hover {
@@ -69,46 +49,131 @@
             color: white;
         }
 
-       .bubble {
-    font-size: 24px;
-    position: fixed;
-    bottom: -40px;
-    left: 50%;
-    animation: rise 4s linear infinite;
-    opacity: 0;
-}
+        /* 🧊 PANELS */
+        .panel {
+            background-color: rgba(255, 255, 255, 0.55);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(43, 58, 103, 0.15);
+        }
 
-@keyframes rise {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+        .panel h2 {
+            color: #2b3a67;
+        }
 
-    100% {
-        transform: translateY(-600px);
-        opacity: 0;
-    }
-}
+        /* 🧭 GRID CARDS */
+        .grid {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 200px;
+            background-color: #2b3a67;
+            color: #d6f1ff;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: #3b4d85;
+        }
+
+        .card p {
+            color: #a3c4ff;
+            font-size: 0.9em;
+        }
+
+        /* 🫧 BUBBLES */
+        .bubble {
+            font-size: 24px;
+            position: fixed;
+            bottom: -40px;
+            left: 50%;
+            animation: rise 4s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes rise {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-600px); opacity: 0; }
+        }
+
+        button {
+            background-color: #2b3a67;
+            color: #d6f1ff;
+            border: 2px solid #5a7dff;
+            padding: 10px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #716cff;
+            transform: scale(1.05);
+        }
+
     </style>
 </head>
 
 <body>
 
-   <div class="sidebar">
-    <h3>🐟 Mossy Menu</h3>
-
-    <a href="index.html">🏠 Home</a>
-    <a href="changelog.html">📜 Changelog</a>
-    <a href="commands.html">🤖 Commands</a>
-</div>
-    
+    <!-- 🐟 SIDEBAR -->
+    <div class="sidebar">
+        <h3>🐟 Mossy Menu</h3>
+        <a href="index.html">🏠 Home</a>
+        <a href="changelog.html">📜 Changelog</a>
+        <a href="commands.html">🤖 Commands</a>
+    </div>
 
     <h1>Mossy's Fish Tank</h1>
-
     <p>Welcome to the aquarium!!</p>
 
     <button onclick="alert('glub glub 🐟')">Pat Mossy</button>
-    
+
+    <div class="panel">
+        <h2>🐟 Mossy Status</h2>
+        <p>Mood: calm waters 🌊</p>
+        <p>Current activity: watching pebbles suspiciously</p>
+        <p>Server energy: stable</p>
+    </div>
+
+    <div class="panel">
+        <h2>💙 What is Mossy?</h2>
+        <p>Mossy is a digital fish who remembers you, listens to you, and occasionally questions gravel.</p>
+    </div>
+
+    <div class="grid">
+
+        <a href="changelog.html" class="card">
+            📜 Changelog
+            <p>See Mossy’s evolution</p>
+        </a>
+
+        <a href="commands.html" class="card">
+            🤖 Commands
+            <p>Ways to talk to Mossy</p>
+        </a>
+
+    </div>
+
+    <div class="panel">
+        <h2>🐟 Mossy says:</h2>
+        <p>"i have counted 3 bubbles today. something is wrong."</p>
+    </div>
+
+    <div class="panel">
+        <h2>✨ Latest Update</h2>
+        <p>Mossy now remembers your existence across time (slightly concerning but wholesome).</p>
+    </div>
+
     <div class="bubble">🫧</div>
 
 </body>
