@@ -144,5 +144,8 @@ h2 {
     .card {
         min-width: auto;
     }
-
+    
+button {
+    width: 100%;
+    max-width: 300px;
 }
