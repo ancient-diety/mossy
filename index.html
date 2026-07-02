@@ -95,4 +95,25 @@ setInterval(() => {
 }, 4000);
 </script>
 
+<script>
+
+const mossies = [
+    "mossystare.png",
+    "mossyleft.png",
+    "mossyright.png",
+    "mossytiltup.png",
+    "mossypog.png",
+    "mossynap.png"
+];
+
+const mossy = document.querySelector(".mossy");
+
+setInterval(() => {
+
+    mossy.src = mossies[Math.floor(Math.random()*mossies.length)];
+
+},4000);
+
+</script>
+    
 </html>
