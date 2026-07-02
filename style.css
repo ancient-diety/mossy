@@ -218,4 +218,6 @@ button:hover {
     top: 50%;
 
     transform: translate(-50%, -50%);
+    animation: float 4s ease-in-out infinite;
 }
+
