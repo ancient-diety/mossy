@@ -12,10 +12,15 @@ body {
 }
 
 /* 🐠 HEADERS */
+h1,
+h2 {
+    text-align: center;
+    color: #2f6f85;
+}
+
 h1 {
     color: #1f4e5f;
     text-shadow: 0 0 10px rgba(143, 191, 212, 0.5);
-    text-align: center;
 }
 
 p {
