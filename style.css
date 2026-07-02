@@ -198,26 +198,29 @@ button:hover {
 
 /* 🐟 Fish Tank */
 
-.tank {
-    position: relative;
-    width: 420px;
-    margin: 50px auto;
+.tank{
+    position:relative;
+    width:500px;
+    margin:auto;
 }
 
-.bowl {
-    width: 100%;
-    display: block;
+.bowl{
+    width:100%;
+    display:block;
 }
 
-.mossy {
-    position: absolute;
+.mossy{
+    position:absolute;
+    width:90px;
 
-    width: 90px;
+    left:52%;
+    top:48%;
 
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
+    transform:translate(-50%,-50%);
+    transition:
+        left 3s ease-in-out,
+        top 2s ease-in-out,
+        transform .4s ease;
 }
 
 .mossy{
