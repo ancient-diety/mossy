@@ -174,9 +174,25 @@ setInterval(() => {
 
     let isFed = false;
 
-function feedMossy() {
+function pokeMossy(){
 
-    function petMossy(){
+    const feedText = document.getElementById("feedText");
+
+    const reactions = [
+
+        "Mossy looks confused. 👀",
+
+        "Mossy bonks your finger and swims away. 🐟",
+
+        "Mossy stares directly into your soul.",
+
+        "Mossy performs one dramatic spin.",
+
+        "Mossy has decided you are suspicious."
+
+    ];
+    
+function petMossy(){
 
     const feedText = document.getElementById("feedText");
 
@@ -196,24 +212,8 @@ function feedMossy() {
     },4000);
 
 }
-
-    function pokeMossy(){
-
-    const feedText = document.getElementById("feedText");
-
-    const reactions = [
-
-        "Mossy looks confused. 👀",
-
-        "Mossy bonks your finger and swims away. 🐟",
-
-        "Mossy stares directly into your soul.",
-
-        "Mossy performs one dramatic spin.",
-
-        "Mossy has decided you are suspicious."
-
-    ];
+    
+function feedMossy() {
 
     feedText.innerText =
         reactions[Math.floor(Math.random()*reactions.length)];
