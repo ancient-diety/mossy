@@ -34,7 +34,11 @@
 
 </div>
 
-    <button onclick="feedMossy()">🍤 Feed Mossy</button>
+<button onclick="feedMossy()">🍤 Feed Mossy</button>
+
+<button onclick="petMossy()">🫧 Pet Mossy</button>
+
+<button onclick="pokeMossy()">👉 Poke Mossy</button>
 
 <p id="feedText"></p>
 
@@ -171,6 +175,58 @@ setInterval(() => {
     let isFed = false;
 
 function feedMossy() {
+
+    function petMossy(){
+
+    const feedText = document.getElementById("feedText");
+
+    currentMood = "happy";
+
+    document.getElementById("mood").innerText =
+        "Mood: " + moods[currentMood].name;
+
+    animateMossy();
+
+    feedText.innerText = "Mossy happily wiggles around the bowl! 🫧💚";
+
+    setTimeout(() => {
+
+        feedText.innerText = "";
+
+    },4000);
+
+}
+
+    function pokeMossy(){
+
+    const feedText = document.getElementById("feedText");
+
+    const reactions = [
+
+        "Mossy looks confused. 👀",
+
+        "Mossy bonks your finger and swims away. 🐟",
+
+        "Mossy stares directly into your soul.",
+
+        "Mossy performs one dramatic spin.",
+
+        "Mossy has decided you are suspicious."
+
+    ];
+
+    feedText.innerText =
+        reactions[Math.floor(Math.random()*reactions.length)];
+
+    animateMossy();
+
+    setTimeout(() => {
+
+        feedText.innerText = "";
+
+    },4000);
+
+}
 
     const feedText = document.getElementById("feedText");
 
