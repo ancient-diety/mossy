@@ -1,34 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const thoughtsElement = document.getElementById("mossySpeak");
+    const mossySpeak = document.getElementById("mossySpeak");
 
-    if (!thoughtsElement) return;
+    if (!mossySpeak) return;
 
     const thoughts = [
-
-        "I have counted 3 bubbles today!!",
-        "The pebbles are plotting.",
-        "The snail knows something.",
-        "Water remains wet.",
-        "I wonder where the shrimp went.",
-        "I blinked. Nothing changed.",
-        "One bubble looked suspicious.",
-        "Today feels fishy.",
-        "I should investigate the gravel.",
-        "Glub."
-        "Fix your posture."
-
+        "I have counted 3 bubbles today.",
+        "Pebbles remain suspicious.",
+        "The snail definitely knows something.",
+        "Bubble acquired.",
+        "Today feels particularly fish.",
+        "Water is still wet.",
+        "I blinked.",
+        "The gravel moved.",
+        "Glub.",
+        "I wonder where the shrimp went."
     ];
 
-    function newThought(){
-
-        thoughtsElement.innerText =
+    function changeThought() {
+        mossySpeak.innerText =
             thoughts[Math.floor(Math.random() * thoughts.length)];
-
     }
 
-    newThought();
+    changeThought();
 
-    setInterval(newThought, 8000);
+    setInterval(changeThought, 8000);
 
 });
