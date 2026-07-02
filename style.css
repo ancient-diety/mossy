@@ -195,3 +195,27 @@ button:hover {
         min-width: auto;
     }
 }
+
+/* 🐟 Fish Tank */
+
+.tank {
+    position: relative;
+    width: 420px;
+    margin: 50px auto;
+}
+
+.bowl {
+    width: 100%;
+    display: block;
+}
+
+.mossy {
+    position: absolute;
+
+    width: 90px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
