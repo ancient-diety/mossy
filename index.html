@@ -69,6 +69,43 @@
 </div>
 
     <img src="snail.png" id="snail">
+
+    <script>const snail = document.getElementById("snail");
+
+const hidingSpots = [
+
+    {left:"30%", bottom:"180px"},
+    {left:"55%", bottom:"280px"},
+    {left:"75%", bottom:"220px"},
+    {left:"40%", bottom:"360px"}
+
+];
+
+function snailVisit(){
+
+    const spot =
+        hidingSpots[Math.floor(Math.random()*hidingSpots.length)];
+
+    snail.style.left = spot.left;
+    snail.style.bottom = spot.bottom;
+
+    setTimeout(() => {
+
+        snail.style.bottom = "-60px";
+
+    },3000);
+
+}
+
+setInterval(() => {
+
+    if(Math.random() < 0.35){
+
+        snailVisit();
+
+    }
+
+},30000);</script>
     
 </body>
     <p id="mossySpeak">Mossy is thinking… 🐟</p>
