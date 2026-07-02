@@ -199,70 +199,49 @@ button:hover {
 /* 🐟 Fish Tank */
 
 .tank{
+
     position:relative;
-    width:500px;
-    margin:auto;
+    width:450px;
+    max-width:100%;
+    margin:30px auto;
+
 }
 
 .bowl{
+
     width:100%;
     display:block;
+
 }
 
 .mossy{
+
     position:absolute;
-    width:90px;
 
-    left:52%;
-    top:48%;
-
-    transform:translate(-50%,-50%);
-    transition:
-        left 3s ease-in-out,
-        top 2s ease-in-out,
-        transform .4s ease;
-}
-
-.mossy{
-    position:absolute;
-    width:90px;
+    width:70px;
 
     left:50%;
-    top:55%;
+    top:50%;
 
     transform:translate(-50%,-50%);
 
+    transition:
+        left 3s ease,
+        top 3s ease,
+        transform .4s ease;
+
     animation:bob 3s ease-in-out infinite;
+
 }
 
 @keyframes bob{
 
-    0%{
+    0%,100%{
         transform:translate(-50%,-50%);
     }
 
     50%{
-        transform:translate(-50%,-58%);
-    }
-
-    100%{
-        transform:translate(-50%,-50%);
-    }
-
-}
-
-@keyframes swim{
-
-    0%{
-        left:46%;
-    }
-
-    50%{
-        left:54%;
-    }
-
-    100%{
-        left:46%;
+        transform:translate(-50%,-56%);
     }
 
 }
