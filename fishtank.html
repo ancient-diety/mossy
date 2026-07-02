@@ -181,39 +181,12 @@ function pokeMossy(){
     const reactions = [
 
         "Mossy looks confused. 👀",
-
         "Mossy bonks your finger and swims away. 🐟",
-
         "Mossy stares directly into your soul.",
-
         "Mossy performs one dramatic spin.",
-
         "Mossy has decided you are suspicious."
 
     ];
-    
-function petMossy(){
-
-    const feedText = document.getElementById("feedText");
-
-    currentMood = "happy";
-
-    document.getElementById("mood").innerText =
-        "Mood: " + moods[currentMood].name;
-
-    animateMossy();
-
-    feedText.innerText = "Mossy happily wiggles around the bowl! 🫧💚";
-
-    setTimeout(() => {
-
-        feedText.innerText = "";
-
-    },4000);
-
-}
-    
-function feedMossy() {
 
     feedText.innerText =
         reactions[Math.floor(Math.random()*reactions.length)];
@@ -228,34 +201,66 @@ function feedMossy() {
 
 }
 
+function petMossy(){
+
     const feedText = document.getElementById("feedText");
 
-    if (currentMood === "hungry") {
+    currentMood = "happy";
+
+    document.getElementById("mood").innerText =
+        "Mood: " + moods[currentMood].name;
+
+    animateMossy();
+
+    feedText.innerText =
+        "Mossy happily wiggles around the bowl! 🫧💚";
+
+    setTimeout(() => {
+
+        feedText.innerText = "";
+
+    },4000);
+
+}
+
+function feedMossy(){
+
+    const feedText = document.getElementById("feedText");
+
+    if(currentMood === "hungry"){
 
         isFed = true;
         currentMood = "happy";
-document.getElementById("mood").innerText =
-    "Mood: " + moods[currentMood].name;
 
-animateMossy();
+        document.getElementById("mood").innerText =
+            "Mood: " + moods[currentMood].name;
+
+        animateMossy();
 
         feedText.innerText = "Mossy is VERY happy!! 🍤✨";
 
         setTimeout(() => {
+
             isFed = false;
             chooseMood();
-animateMossy();
+            animateMossy();
             feedText.innerText = "";
-        }, 8000);
 
-    } else {
+        },8000);
 
-        feedText.innerText = "Mossy is not hungry... but appreciated the snack anyway 🐟";
+    }else{
+
+        feedText.innerText =
+            "Mossy is not hungry... but appreciated the snack anyway 🐟";
 
         setTimeout(() => {
+
             feedText.innerText = "";
-        }, 4000);
+
+        },4000);
+
     }
+
 }
 
 </script>
