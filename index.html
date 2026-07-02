@@ -70,33 +70,39 @@
 
     <img src="snail.png" id="snail">
 
-    <script>const snail = document.getElementById("snail");
+<script>
 
-const hidingSpots = [
-
-    {left:"30%", bottom:"180px"},
-    {left:"55%", bottom:"280px"},
-    {left:"75%", bottom:"220px"},
-    {left:"40%", bottom:"360px"}
-
-];
+const snail = document.getElementById("snail");
 
 function snailVisit(){
 
-    const spot =
-        hidingSpots[Math.floor(Math.random()*hidingSpots.length)];
+    // Never appear under the sidebar
+    const minX =
+        window.innerWidth <= 768 ? 20 : 260;
 
-    snail.style.left = spot.left;
-    snail.style.bottom = spot.bottom;
+    const maxX = window.innerWidth - 80;
+    const maxY = window.innerHeight - 100;
 
+    const x =
+        Math.random() * (maxX - minX) + minX;
+
+    const y =
+        Math.random() * (maxY - 40) + 40;
+
+    snail.style.left = x + "px";
+    snail.style.top = y + "px";
+    snail.style.opacity = "1";
+
+    // disappear after 0.6-1.2 seconds
     setTimeout(() => {
 
-        snail.style.bottom = "-60px";
+        snail.style.opacity = "0";
 
-    },3000);
+    },600 + Math.random()*600);
 
 }
 
+// Small chance every 30 seconds
 setInterval(() => {
 
     if(Math.random() < 0.35){
@@ -105,7 +111,9 @@ setInterval(() => {
 
     }
 
-},30000);</script>
+},30000);
+
+</script>
     
 </body>
     <p id="mossySpeak">Mossy is thinking… 🐟</p>
