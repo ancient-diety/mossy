@@ -163,8 +163,7 @@ setInterval(animateMossy,4000);
 setInterval(() => {
 
     if (!isFed) {
-        mood = moods[Math.floor(Math.random() * moods.length)];
-        console.log("Mood:", mood);
+        chooseMood();
     }
 
 }, 20000);
@@ -175,16 +174,21 @@ function feedMossy() {
 
     const feedText = document.getElementById("feedText");
 
-    if (mood === "hungry") {
+    if (currentMood === "hungry") {
 
         isFed = true;
-        mood = "happy";
+        currentMood = "happy";
+document.getElementById("mood").innerText =
+    "Mood: " + moods[currentMood].name;
+
+animateMossy();
 
         feedText.innerText = "Mossy is VERY happy!! 🍤✨";
 
         setTimeout(() => {
             isFed = false;
-            mood = moods[Math.floor(Math.random() * moods.length)];
+            chooseMood();
+animateMossy();
             feedText.innerText = "";
         }, 8000);
 
