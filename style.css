@@ -259,10 +259,9 @@ button:hover {
 
     opacity:0;
 
-    transition:
-        left .8s ease,
-        top .8s ease,
-        opacity .5s ease;
+    transition:left .8s ease,
+               top .8s ease,
+               opacity .5s ease;
 
     pointer-events:none;
 
