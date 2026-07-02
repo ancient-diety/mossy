@@ -34,6 +34,10 @@
 
 </div>
 
+    <button onclick="feedMossy()">🍤 Feed Mossy</button>
+
+<p id="feedText"></p>
+
 <h2 id="mood">Mood: Calm 🌊</h2>
 
 <p id="mossySpeak"></p>
@@ -158,11 +162,41 @@ setInterval(animateMossy,4000);
 
 setInterval(() => {
 
-    chooseMood();
+    if (!isFed) {
+        mood = moods[Math.floor(Math.random() * moods.length)];
+        console.log("Mood:", mood);
+    }
 
-    animateMossy();
+}, 20000);
 
-},20000);
+    let isFed = false;
+
+function feedMossy() {
+
+    const feedText = document.getElementById("feedText");
+
+    if (mood === "hungry") {
+
+        isFed = true;
+        mood = "happy";
+
+        feedText.innerText = "Mossy is VERY happy!! 🍤✨";
+
+        setTimeout(() => {
+            isFed = false;
+            mood = moods[Math.floor(Math.random() * moods.length)];
+            feedText.innerText = "";
+        }, 8000);
+
+    } else {
+
+        feedText.innerText = "Mossy is not hungry... but appreciated the snack anyway 🐟";
+
+        setTimeout(() => {
+            feedText.innerText = "";
+        }, 4000);
+    }
+}
 
 </script>
 
