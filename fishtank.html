@@ -34,93 +34,137 @@
 
 </div>
 
-    <script>
-const lines = [
-    "I have counted 3.5 bubbles today.",
-    "gravel is suspicious again.",
-    "I think I saw movement. it was probably nothing.",
-    "hello. I am emotionally processing water.",
-    "someone blinked at me. I felt judged.",
-    "I am watching everything. especially pebbles."
-];
+<h2 id="mood">Mood: Calm 🌊</h2>
 
-setInterval(() => {
-    document.getElementById("mossySpeak").innerText =
-        lines[Math.floor(Math.random() * lines.length)];
-}, 4000);
-</script>
+<p id="mossySpeak"></p>
 
 <script>
 
-const mossies = [
-    "mossystare.png",
-    "mossyleft.png",
-    "mossyright.png",
-    "mossytiltup.png",
-    "mossypog.png",
-    "mossynap.png"
-];
-
 const mossy = document.querySelector(".mossy");
 
-const states = [
+const moods = {
 
-{
-    img:"mossyleft.png",
-    left:35,
-    top:50
-},
+    calm:{
+        name:"Calm 🌊",
+        thoughts:[
+            "The water feels nice today.",
+            "Everything is peaceful.",
+            "Just floating."
+        ],
+        poses:[
+            {img:"mossystare.png",left:50,top:50},
+            {img:"mossyleft.png",left:42,top:52},
+            {img:"mossyright.png",left:58,top:48}
+        ]
+    },
 
-{
-    img:"mossyright.png",
-    left:67,
-    top:52
-},
+    curious:{
+        name:"Curious 👀",
+        thoughts:[
+            "Pebble detected.",
+            "Something moved...",
+            "Investigating..."
+        ],
+        poses:[
+            {img:"mossypog.png",left:55,top:46},
+            {img:"mossytiltup.png",left:62,top:38},
+            {img:"mossystare.png",left:50,top:44}
+        ]
+    },
 
-{
-    img:"mossystare.png",
-    left:52,
-    top:48
-},
+    hungry:{
+        name:"Hungry 🍤",
+        thoughts:[
+            "Food?",
+            "Where flakes.",
+            "I require snacks."
+        ],
+        poses:[
+            {img:"mossypog.png",left:52,top:49},
+            {img:"mossyleft.png",left:40,top:47},
+            {img:"mossyright.png",left:60,top:47}
+        ]
+    },
 
-{
-    img:"mossytiltup.png",
-    left:60,
-    top:38
-},
+    sleepy:{
+        name:"Sleepy 😴",
+        thoughts:[
+            "five more minutes...",
+            "zzzz...",
+            "too eepy..."
+        ],
+        poses:[
+            {img:"mossynap.png",left:50,top:60},
+            {img:"mossynap.png",left:48,top:58}
+        ]
+    },
 
-{
-    img:"mossypog.png",
-    left:48,
-    top:45
-},
+    happy:{
+        name:"Happy 🫧",
+        thoughts:[
+            "glub!!",
+            "Today is a good fish day.",
+            "I love bubbles."
+        ],
+        poses:[
+            {img:"mossypog.png",left:50,top:48},
+            {img:"mossytiltup.png",left:60,top:42},
+            {img:"mossystare.png",left:45,top:46}
+        ]
+    }
 
-{
-    img:"mossynap.png",
-    left:45,
-    top:60
+};
+
+let currentMood = "calm";
+
+function chooseMood(){
+
+    const keys = Object.keys(moods);
+
+    currentMood = keys[Math.floor(Math.random()*keys.length)];
+
+    document.getElementById("mood").innerText =
+        "Mood: " + moods[currentMood].name;
+
 }
-
-];
 
 function animateMossy(){
 
-    const state = states[Math.floor(Math.random()*states.length)];
+    const behaviour = moods[currentMood];
 
-    mossy.src = state.img;
+    const pose =
+        behaviour.poses[
+            Math.floor(Math.random()*behaviour.poses.length)
+        ];
 
-    mossy.style.left = state.left + "%";
-    mossy.style.top = state.top + "%";
+    mossy.src = pose.img;
+
+    mossy.style.left = pose.left + "%";
+
+    mossy.style.top = pose.top + "%";
+
+    document.getElementById("mossySpeak").innerText =
+        behaviour.thoughts[
+            Math.floor(Math.random()*behaviour.thoughts.length)
+        ];
 
 }
+
+chooseMood();
 
 animateMossy();
 
 setInterval(animateMossy,4000);
 
-</script>
+setInterval(() => {
 
-</div>
+    chooseMood();
+
+    animateMossy();
+
+},20000);
+
+</script>
 
 </body>
 
