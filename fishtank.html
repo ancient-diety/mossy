@@ -63,11 +63,60 @@ const mossies = [
 
 const mossy = document.querySelector(".mossy");
 
-setInterval(() => {
+const states = [
 
-    mossy.src = mossies[Math.floor(Math.random()*mossies.length)];
+{
+    img:"mossyleft.png",
+    left:35,
+    top:50
+},
 
-},4000);
+{
+    img:"mossyright.png",
+    left:67,
+    top:52
+},
+
+{
+    img:"mossystare.png",
+    left:52,
+    top:48
+},
+
+{
+    img:"mossytiltup.png",
+    left:60,
+    top:38
+},
+
+{
+    img:"mossypog.png",
+    left:48,
+    top:45
+},
+
+{
+    img:"mossynap.png",
+    left:45,
+    top:60
+}
+
+];
+
+function animateMossy(){
+
+    const state = states[Math.floor(Math.random()*states.length)];
+
+    mossy.src = state.img;
+
+    mossy.style.left = state.left + "%";
+    mossy.style.top = state.top + "%";
+
+}
+
+animateMossy();
+
+setInterval(animateMossy,4000);
 
 </script>
 
