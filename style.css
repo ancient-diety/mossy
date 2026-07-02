@@ -220,3 +220,46 @@ button:hover {
     transform: translate(-50%, -50%);
 }
 
+.mossy{
+    position:absolute;
+    width:90px;
+
+    left:50%;
+    top:55%;
+
+    transform:translate(-50%,-50%);
+
+    animation:bob 3s ease-in-out infinite;
+}
+
+@keyframes bob{
+
+    0%{
+        transform:translate(-50%,-50%);
+    }
+
+    50%{
+        transform:translate(-50%,-58%);
+    }
+
+    100%{
+        transform:translate(-50%,-50%);
+    }
+
+}
+
+@keyframes swim{
+
+    0%{
+        left:46%;
+    }
+
+    50%{
+        left:54%;
+    }
+
+    100%{
+        left:46%;
+    }
+
+}
