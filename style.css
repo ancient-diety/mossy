@@ -95,6 +95,7 @@ h2 {
     text-decoration: none;
     transition: 0.25s;
     box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    text-align: center;
 }
 
 .card:hover {
