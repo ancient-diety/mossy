@@ -244,4 +244,22 @@ button:hover {
         transform:translate(-50%,-56%);
     }
 
+} 
+
+#snail{
+
+    position:fixed;
+
+    width:45px;
+
+    bottom:-60px;
+
+    left:50%;
+
+    transition:all 0.8s ease;
+
+    pointer-events:none;
+
+    z-index:999;
+
 }
