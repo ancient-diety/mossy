@@ -1,78 +1,56 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mossy's Fish Tank 🐟</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<div class="sidebar">
-    <h3>🐟 Mossy Menu</h3>
-
-    <a href="index.html">🏠 Home</a>
-    <a href="changelog.html">📜 Changelog</a>
-    <a href="commands.html">🤖 Commands</a>
-    <a href="fishtank.html">🐟 Fish Tank</a>
-</div>
-
-<h1>🐟 Mossy's Fish Tank</h1>
-
-<p><b>Welcome to Mossy's home!</b></p>
-
-<div class="tank">
-
-    <img src="mossybowl.png" class="bowl">
-
-    <img src="mossystare.png" class="mossy">
-
-</div>
-
-    <script>
-const lines = [
-    "I have counted 3.5 bubbles today.",
-    "gravel is suspicious again.",
-    "I think I saw movement. it was probably nothing.",
-    "hello. I am emotionally processing water.",
-    "someone blinked at me. I felt judged.",
-    "I am watching everything. especially pebbles."
-];
-
-setInterval(() => {
-    document.getElementById("mossySpeak").innerText =
-        lines[Math.floor(Math.random() * lines.length)];
-}, 4000);
-</script>
-
-<script>
-
-const mossies = [
-    "mossystare.png",
-    "mossyleft.png",
-    "mossyright.png",
-    "mossytiltup.png",
-    "mossypog.png",
-    "mossynap.png"
-];
-
 const mossy = document.querySelector(".mossy");
 
-setInterval(() => {
+const states = [
 
-    mossy.src = mossies[Math.floor(Math.random()*mossies.length)];
+{
+    img:"mossyleft.png",
+    left:35,
+    top:50
+},
 
-},4000);
+{
+    img:"mossyright.png",
+    left:67,
+    top:52
+},
 
-</script>
+{
+    img:"mossystare.png",
+    left:52,
+    top:48
+},
 
-</div>
+{
+    img:"mossytiltup.png",
+    left:60,
+    top:38
+},
 
-</body>
+{
+    img:"mossypog.png",
+    left:48,
+    top:45
+},
 
-</html>
+{
+    img:"mossynap.png",
+    left:45,
+    top:60
+}
+
+];
+
+function animateMossy(){
+
+    const state = states[Math.floor(Math.random()*states.length)];
+
+    mossy.src = state.img;
+
+    mossy.style.left = state.left + "%";
+    mossy.style.top = state.top + "%";
+
+}
+
+animateMossy();
+
+setInterval(animateMossy,4000);
