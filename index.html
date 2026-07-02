@@ -79,41 +79,5 @@
 
 </body>
     <p id="mossySpeak">Mossy is thinking… 🐟</p>
-<script>
-const lines = [
-    "I have counted 3.5 bubbles today.",
-    "gravel is suspicious again.",
-    "I think I saw movement. it was probably nothing.",
-    "hello. I am emotionally processing water.",
-    "someone blinked at me. I felt judged.",
-    "I am watching everything. especially pebbles."
-];
-
-setInterval(() => {
-    document.getElementById("mossySpeak").innerText =
-        lines[Math.floor(Math.random() * lines.length)];
-}, 4000);
-</script>
-
-<script>
-
-const mossies = [
-    "mossystare.png",
-    "mossyleft.png",
-    "mossyright.png",
-    "mossytiltup.png",
-    "mossypog.png",
-    "mossynap.png"
-];
-
-const mossy = document.querySelector(".mossy");
-
-setInterval(() => {
-
-    mossy.src = mossies[Math.floor(Math.random()*mossies.length)];
-
-},4000);
-
-</script>
     
 </html>
