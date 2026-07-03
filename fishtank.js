@@ -227,4 +227,42 @@ function feedMossy(){
 
     }
 
+    function giftPebble(){
+
+    const feedText = document.getElementById("feedText");
+
+    currentMood = "awe";
+
+    document.getElementById("mood").innerText =
+        "Mood: " + moods[currentMood].name;
+
+    animateMossy();
+
+    const reactions = [
+
+        "Mossy gently hugs the pebble. 🪨💚",
+
+        "Mossy stares at the pebble for a very long time before carefully placing it beside his favourite rock.",
+
+        "Mossy swims tiny circles around the pebble like it's the greatest treasure in the ocean.",
+
+        "Mossy looks at you... then at the pebble... then back at you. He seems genuinely touched. 🥹",
+
+        "Mossy has officially declared this pebble 'extra shiny' and will protect it forever."
+    ];
+
+    feedText.innerText =
+        reactions[Math.floor(Math.random()*reactions.length)];
+
+    setTimeout(() => {
+
+        chooseMood();
+        animateMossy();
+
+        feedText.innerText = "";
+
+    },8000);
+
+}
+
 }
