@@ -69,15 +69,31 @@ const moods = {
             {img:"mossytiltup.png",left:60,top:42},
             {img:"mossystare.png",left:45,top:46}
         ]
-    }
+    },
 
+    awe:{
+    name:"Awe 🥹",
+    thoughts:[
+        "This... for me?",
+        "It's so shiny...",
+        "I'll treasure this forever.",
+        "Nobody has ever given me a pebble this pretty.",
+        "I don't know what to say..."
+    ],
+    poses:[
+        {img:"mossypog.png",left:50,top:48},
+        {img:"mossytiltup.png",left:50,top:45},
+        {img:"mossystare.png",left:50,top:50}
+    ]
+}
+    
 };
 
 let currentMood = "calm";
 
 function chooseMood(){
 
-    const keys = Object.keys(moods);
+    const keys = ["calm","curious","hungry","sleepy","happy"];
 
     currentMood = keys[Math.floor(Math.random()*keys.length)];
 
