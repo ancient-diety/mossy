@@ -227,7 +227,9 @@ function feedMossy(){
 
     }
 
-    function giftPebble(){
+}
+
+function giftPebble(){
 
     const feedText = document.getElementById("feedText");
 
@@ -262,7 +264,5 @@ function feedMossy(){
         feedText.innerText = "";
 
     },8000);
-
-}
 
 }
