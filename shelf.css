@@ -1,1 +1,17 @@
+.shelf{
 
+    width:800px;
+
+    max-width:100%;
+
+    margin:40px auto;
+
+}
+
+.shelfImage{
+
+    width:100%;
+
+    display:block;
+
+}
