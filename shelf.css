@@ -1,5 +1,7 @@
 .shelf{
 
+    position:relative;
+
     width:800px;
 
     max-width:100%;
