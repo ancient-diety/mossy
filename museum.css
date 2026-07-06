@@ -12,7 +12,7 @@
 
 .museumCard{
 
-    background:#FFFBF5; /* warm off-white for better integration */
+    background:var(--surface);
 
     border-radius:18px;
 
@@ -20,7 +20,7 @@
 
     text-align:center;
 
-    box-shadow:0 6px 16px rgba(0,0,0,.12);
+    box-shadow:var(--card-shadow);
 
     transition:.25s;
 
@@ -48,7 +48,7 @@
 
     font-style:italic;
 
-    color:#557b88;
+    color:var(--muted, #557b88);
 
 }
 
