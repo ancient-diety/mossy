@@ -1,0 +1,11 @@
+/* Theme: Bubble Bath */
+:root{
+  --bg:#FBF8FF;
+  --bg-accent: linear-gradient(180deg,#FBF8FF,#F8F6FF);
+  --dot-grid: none;
+  --text:#5a5160;
+  --primary:#F6D8FF;
+  --accent:#C9F0FF;
+  --surface:#FFFBFF;
+  --surface-translucent: rgba(255,255,255,0.75);
+}

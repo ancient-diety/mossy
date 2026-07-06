@@ -1,0 +1,11 @@
+/* Theme: Moss Garden */
+:root{
+  --bg:#EBF6EE;
+  --bg-accent: linear-gradient(180deg,#F6FBF7,#EBF6EE);
+  --dot-grid: none;
+  --text:#34563b;
+  --primary:#3E6B46;
+  --accent:#6B8F65;
+  --surface:#F7FBF8;
+  --surface-translucent: rgba(247,251,248,0.8);
+}

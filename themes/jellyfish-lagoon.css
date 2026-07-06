@@ -1,0 +1,12 @@
+/* Theme: Jellyfish Lagoon */
+:root{
+  --bg:#0b0630;
+  --bg-accent: radial-gradient(circle at top,#120a3a,#0b0630);
+  --dot-grid: none;
+  --text:#e6e0ff;
+  --primary:#8eddf1;
+  --accent:#b58cff;
+  --surface:#120924;
+  --surface-translucent: rgba(18,9,36,0.7);
+  --bubble-color: rgba(180,140,255,0.28);
+}

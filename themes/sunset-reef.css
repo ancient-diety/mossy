@@ -1,0 +1,11 @@
+/* Theme: Sunset Reef */
+:root{
+  --bg: #FFF2EA;
+  --bg-accent: linear-gradient(180deg,#FFF2EA,#FFE8D8);
+  --dot-grid: none;
+  --text: #5b3728;
+  --primary: #FF6D3A;
+  --accent: #FF9E6B;
+  --surface: #FFF7F3;
+  --surface-translucent: rgba(255,247,243,0.8);
+}

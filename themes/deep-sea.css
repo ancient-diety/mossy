@@ -1,0 +1,13 @@
+/* Theme: Deep Sea */
+:root{
+  --bg:#02030a;
+  --bg-accent: radial-gradient(circle at top,#041226,#02030a);
+  --dot-grid: none;
+  --text:#bfeaff;
+  --primary:#0ea4ff;
+  --accent:#6a4cff;
+  --surface:#041226;
+  --surface-translucent: rgba(4,18,38,0.7);
+  --bubble-color: rgba(110,90,255,0.35);
+  --card-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}

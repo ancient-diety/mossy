@@ -1,0 +1,11 @@
+/* Theme: Coral Reef */
+:root{
+  --bg:#EAFBF8;
+  --bg-accent: linear-gradient(180deg,#EAFBF8,#DFF9F4);
+  --dot-grid: none;
+  --text:#1f5b57;
+  --primary:#2ED6C6;
+  --accent:#FF6FA3;
+  --surface:#F8FFFD;
+  --surface-translucent: rgba(248,255,253,0.8);
+}

@@ -1,0 +1,11 @@
+/* Theme: Artist's Studio */
+:root{
+  --bg:#fffaf6;
+  --bg-accent: linear-gradient(180deg,#fffaf6,#fff3ec);
+  --dot-grid: none;
+  --text:#3f3a36;
+  --primary:#FFD6E0;
+  --accent:#C9E9FF;
+  --surface:#FFFBF7;
+  --surface-translucent: rgba(255,251,247,0.8);
+}

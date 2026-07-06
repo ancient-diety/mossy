@@ -1,0 +1,11 @@
+/* Theme: Kelp Forest */
+:root{
+  --bg:#07291f;
+  --bg-accent: radial-gradient(circle at top,#0b3b2f,#07291f);
+  --dot-grid: none;
+  --text:#d9efe8;
+  --primary:#2aa689;
+  --accent:#1f7a66;
+  --surface:#0f3b33;
+  --surface-translucent: rgba(15,59,51,0.7);
+}

@@ -1,4 +1,4 @@
-// theme.js - implements theme picker and persistence
+// theme.js - dynamically loads a theme stylesheet per selection
 (function(){
   const THEMES = [
     'light','sunset-reef','moss-garden','coral-reef','arctic-ocean','deep-sea',
@@ -8,12 +8,28 @@
   const storageKey = 'mossy:theme';
   const root = document.documentElement;
   const picker = document.getElementById('themePickerSelect');
+  const linkId = 'theme-stylesheet';
 
   function setTheme(name){
-    // remove any theme- classes and add the chosen one (except 'light' -> no class)
+    // remove any theme-* classes to avoid conflicts
     THEMES.forEach(t => root.classList.remove('theme-' + t));
-    if(name && name !== 'light') root.classList.add('theme-' + name);
-    // update select state
+
+    // Manage dynamic stylesheet: remove for 'light', add for others
+    let link = document.getElementById(linkId);
+    if(name && name !== 'light'){
+      const href = 'themes/' + name + '.css';
+      if(!link){
+        link = document.createElement('link');
+        link.id = linkId;
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+      }
+      // Only change href if different to avoid reloads
+      if(!link.href || !link.href.endsWith(href)) link.href = href;
+    } else {
+      if(link) link.remove();
+    }
+
     if(picker) picker.value = name;
     try{ localStorage.setItem(storageKey, name); }catch(e){}
   }
