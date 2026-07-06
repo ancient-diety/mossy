@@ -28,6 +28,8 @@
 
     transition:.25s;
 
+    cursor:help;
+
 }
 
 .museumCard:hover{
