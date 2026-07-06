@@ -12,7 +12,7 @@
 
 .museumCard{
 
-    background:white;
+    background:#FFFBF5; /* warm off-white for better integration */
 
     border-radius:18px;
 
@@ -23,6 +23,8 @@
     box-shadow:0 6px 16px rgba(0,0,0,.12);
 
     transition:.25s;
+
+    border: 1px solid rgba(31,78,95,0.04);
 
 }
 

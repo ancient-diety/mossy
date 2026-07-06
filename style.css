@@ -71,7 +71,8 @@ h2 {
 
 /* 🧊 PANELS */
 .panel {
-    background-color: rgba(255, 255, 255, 0.7);
+    /* warm off-white surface, kept translucent like before */
+    background-color: rgba(255, 251, 245, 0.7); /* #FFFBF5 */
     padding: 18px;
     border-radius: 16px;
     margin: 16px 0;
