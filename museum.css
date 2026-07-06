@@ -12,31 +12,23 @@
 
 .museumCard{
 
-    display:flex;
+    background:white;
 
-    flex-direction:column;
+    border-radius:18px;
 
-    align-items:center;
+    padding:18px;
 
-    background-color:rgba(255,255,255,.7);
+    text-align:center;
 
-    border-radius:16px;
-
-    padding:20px;
-
-    box-shadow:0 6px 18px rgba(31,78,95,.12);
+    box-shadow:0 6px 16px rgba(0,0,0,.12);
 
     transition:.25s;
-
-    cursor:help;
 
 }
 
 .museumCard:hover{
 
-    transform:translateY(-5px) scale(1.03);
-
-    box-shadow:0 10px 24px rgba(31,78,95,.20);
+    transform:translateY(-5px);
 
 }
 
@@ -48,8 +40,6 @@
 
     object-fit:contain;
 
-    margin-bottom:10px;
-
 }
 
 .description{
@@ -60,10 +50,16 @@
 
 }
 
-.museumCard h2{
-
-    margin:8px 0;
-
-    font-size:1.2em;
-
+/* Layout and image fixes: center images, prevent distortion, spacing */
+.museumCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.museumCard img{
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 12px;
 }
