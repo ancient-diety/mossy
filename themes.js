@@ -144,6 +144,34 @@ const themes = {
 
 },
 
+    rainbow-mist: {
+
+    "--bg": "#4E4C5E",
+
+    "--bg-accent":
+        "linear-gradient(180deg, #572F48, #4E4C5E)",
+
+    "--dot-grid": "none",
+
+    "--text": "#F5E8DD",
+
+    "--primary": "#DC7668",
+
+    "--accent": "#FFA67A",
+
+    "--surface": "#817965",
+
+    "--surface-translucent":
+        "rgba(129,121,101,.85)",
+
+    "--bubble-color":
+        "rgba(255,166,122,.22)",
+
+    "--card-shadow":
+        "0 8px 22px rgba(78,76,94,.35)"
+
+},
+
 };
 
 function applyTheme(themeName) {
