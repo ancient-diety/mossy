@@ -87,6 +87,34 @@ const themes = {
     "--card-shadow": "0 8px 22px rgba(41,0,66,.15)"
 
 },
+
+    nebula: {
+
+    "--bg": "#0F397A",
+
+    "--bg-accent":
+        "linear-gradient(180deg, #580738, #0F397A)",
+
+    "--dot-grid": "none",
+
+    "--text": "#D1E6C3",
+
+    "--primary": "#55CDED",
+
+    "--accent": "#FF5C4C",
+
+    "--surface": "#24467F",
+
+    "--surface-translucent":
+        "rgba(36,70,127,.85)",
+
+    "--bubble-color":
+        "rgba(85,205,237,.22)",
+
+    "--card-shadow":
+        "0 8px 22px rgba(0,0,0,.45)"
+
+},
         
 
 };
