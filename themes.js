@@ -227,6 +227,34 @@ const themes = {
         "0 8px 22px rgba(33,33,29,.18)"
 
 },
+
+    hyacinth: {
+
+    "--bg": "#482A41",
+
+    "--bg-accent":
+        "linear-gradient(180deg,#572E54,#482A41)",
+
+    "--dot-grid": "none",
+
+    "--text": "#E2D2C8",
+
+    "--primary": "#8E7692",
+
+    "--accent": "#E2D2C8",
+
+    "--surface": "#572E54",
+
+    "--surface-translucent":
+        "rgba(87,46,84,.82)",
+
+    "--bubble-color":
+        "rgba(226,210,200,.10)",
+
+    "--card-shadow":
+        "0 8px 22px rgba(0,0,0,.45)"
+
+},
     
 };
 
