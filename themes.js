@@ -115,7 +115,34 @@ const themes = {
         "0 8px 22px rgba(0,0,0,.45)"
 
 },
-        
+
+    mossy: {
+
+    "--bg": "#CDE8D4",
+
+    "--bg-accent":
+        "linear-gradient(180deg, #CDE8D4, #97C49E)",
+
+    "--dot-grid": "none",
+
+    "--text": "#657E47",
+
+    "--primary": "#6C9B76",
+
+    "--accent": "#80A32F",
+
+    "--surface": "#BAD17A",
+
+    "--surface-translucent":
+        "rgba(186,209,122,.85)",
+
+    "--bubble-color":
+        "rgba(151,196,158,.25)",
+
+    "--card-shadow":
+        "0 8px 22px rgba(101,126,71,.25)"
+
+},
 
 };
 
