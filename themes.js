@@ -25,16 +25,16 @@ const themes = {
     "--bg": "#14161C",
 
     "--bg-accent":
-        "radial-gradient(circle at top,#2B3550,#14161C)",
-
+    "radial-gradient(circle at top,#232B3F,#14161C)",
+        
     "--dot-grid": "none",
 
     "--text": "#E7EEF8",
 
-    "--primary": "#7BC8FF",
-
-    "--accent": "#5B9DFF",
-
+    "--primary": "#8EA6C1",
+        
+    "--accent": "#5F7EA5",
+        
     "--surface": "#20252F",
 
     "--surface-translucent":
