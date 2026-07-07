@@ -20,6 +20,34 @@ const themes = {
 
     },
 
+    dark: {
+
+    "--bg": "#14161C",
+
+    "--bg-accent":
+        "radial-gradient(circle at top,#2B3550,#14161C)",
+
+    "--dot-grid": "none",
+
+    "--text": "#E7EEF8",
+
+    "--primary": "#7BC8FF",
+
+    "--accent": "#5B9DFF",
+
+    "--surface": "#20252F",
+
+    "--surface-translucent":
+        "rgba(32,37,47,.85)",
+
+    "--bubble-color":
+        "rgba(91,157,255,.15)",
+
+    "--card-shadow":
+        "0 8px 20px rgba(0,0,0,.45)"
+
+},
+
     whimsical: {
 
         "--bg": "#FDF0F9",
