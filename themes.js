@@ -67,6 +67,10 @@ function applyTheme(themeName) {
 
 }
 
-const savedTheme = "whimsical";
+const selector = document.getElementById("theme-selector");
+
+const savedTheme = localStorage.getItem("theme") || "light";
 
 applyTheme(savedTheme);
+
+selector.value = savedTheme;
