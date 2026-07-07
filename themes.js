@@ -74,3 +74,13 @@ const savedTheme = localStorage.getItem("theme") || "light";
 applyTheme(savedTheme);
 
 selector.value = savedTheme;
+
+selector.addEventListener("change", () => {
+
+    const chosenTheme = selector.value;
+
+    applyTheme(chosenTheme);
+
+    localStorage.setItem("theme", chosenTheme);
+
+});
