@@ -2,7 +2,7 @@
 :root{
   --bg:#EBF6EE;
   --bg-accent: linear-gradient(180deg,#F6FBF7,#EBF6EE);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text:#34563b;
   --primary:#3E6B46;
   --accent:#6B8F65;
