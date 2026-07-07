@@ -17,6 +17,22 @@
     --card-shadow:0 6px 16px rgba(0,0,0,.12);
 }
 
+body {
+    background-color: var(--bg);
+    background-image: var(--bg-accent), var(--dot-grid);
+    background-repeat: repeat, repeat;
+    background-position: center top, 0 0;
+
+    color: var(--text);
+
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+
+    margin-left: 240px;
+    padding: 25px;
+    max-width: 900px;
+    line-height: 1.7;
+}
+
 /* 🐠 HEADERS */
 h1,
 h2 {
