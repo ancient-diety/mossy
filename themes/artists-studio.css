@@ -2,7 +2,11 @@
 :root{
   --bg:#fffaf6;
   --bg-accent: linear-gradient(180deg,#fffaf6,#fff3ec);
-  --dot-grid: none;
+  --dot-grid:
+  url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'>\
+  <path d='M40 0H0V40' stroke='%23d6c5b4' stroke-width='1' opacity='0.35' fill='none'/>\
+  </svg>");
   --text:#3f3a36;
   --primary:#FFD6E0;
   --accent:#C9E9FF;
