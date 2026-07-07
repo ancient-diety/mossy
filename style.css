@@ -2,7 +2,7 @@
   /* Core tokens (Light theme) */
   --bg: #d9f3f6;
   --bg-accent: radial-gradient(circle at top, #eafcff, #d9f3f6);
-  --dot-grid: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><circle cx='12' cy='12' r='1.5' fill='%2374a6b0' fill-opacity='0.22'/></svg>");
+  --bg-pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><circle cx='12' cy='12' r='1.5' fill='%2374a6b0' fill-opacity='0.22'/></svg>");
 
   --text: #3a616b;
   --primary: #1f4e5f;
@@ -23,7 +23,7 @@
 .theme-light {
   --bg: #d9f3f6;
   --bg-accent: radial-gradient(circle at top, #eafcff, #d9f3f6);
-  --dot-grid: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><circle cx='12' cy='13' r='1.5' fill='%2374a6b0' fill-opacity='0.22'/></svg>");
+  --bg-pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><circle cx='12' cy='13' r='1.5' fill='%2374a6b0' fill-opacity='0.22'/></svg>");
   --text: #2a4a56;
   --primary: #1f4e5f;
   --accent: #4a90a4;
@@ -37,7 +37,7 @@
 .theme-dark {
   --bg: #1a2a33;
   --bg-accent: radial-gradient(circle at top, #223849, #1a2a33);
-  --dot-grid: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><circle cx='3' cy='3' r='1.5' fill='%238fbfd4' fill-opacity='0.12'/></svg>");
+  --bg-pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><circle cx='3' cy='3' r='1.5' fill='%238fbfd4' fill-opacity='0.12'/></svg>");
   --text: #d4e4f0;
   --primary: #5ab3e8;
   --accent: #8fd4f5;
@@ -53,7 +53,7 @@
 .theme-sunset-reef {
   --bg: #FFF2EA;
   --bg-accent: linear-gradient(180deg, #FFF2EA, #FFE8D8);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #4a2815;
   --primary: #D94A1F;
   --accent: #FF8A52;
@@ -67,7 +67,7 @@
 .theme-moss-garden {
   --bg: #EBF6EE;
   --bg-accent: linear-gradient(180deg, #F6FBF7, #EBF6EE);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #1f3a26;
   --primary: #2D5A35;
   --accent: #5A8A60;
@@ -81,7 +81,7 @@
 .theme-coral-reef {
   --bg: #EAFBF8;
   --bg-accent: linear-gradient(180deg, #EAFBF8, #DFF9F4);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #0d4a45;
   --primary: #0DB9A8;
   --accent: #FF5A8A;
@@ -95,7 +95,7 @@
 .theme-arctic-ocean {
   --bg: #F8FCFF;
   --bg-accent: linear-gradient(180deg, #F8FCFF, #EEF9FF);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #1a3a4a;
   --primary: #0076B8;
   --accent: #4FA3D1;
@@ -109,7 +109,7 @@
 .theme-deep-sea {
   --bg: #02030a;
   --bg-accent: radial-gradient(circle at top, #041226, #02030a);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #a8e0ff;
   --primary: #00B8FF;
   --accent: #7E5FFF;
@@ -123,7 +123,7 @@
 .theme-bubble-bath {
   --bg: #FBF8FF;
   --bg-accent: linear-gradient(180deg, #FBF8FF, #F8F6FF);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #4a3a5a;
   --primary: #D890F0;
   --accent: #7BA8FF;
@@ -137,7 +137,7 @@
 .theme-pebble-theme {
   --bg: #ECECEC;
   --bg-accent: linear-gradient(180deg, #F1F1F1, #ECECEC);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #1a1f25;
   --primary: #5A5F67;
   --accent: #888D95;
@@ -151,7 +151,7 @@
 .theme-shrimp-theme {
   --bg: #FFF6F4;
   --bg-accent: linear-gradient(180deg, #FFF6F4, #FFEEE9);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #4a1f15;
   --primary: #E84A28;
   --accent: #FF9966;
@@ -165,7 +165,7 @@
 .theme-spring-pond {
   --bg: #F6FBF6;
   --bg-accent: linear-gradient(180deg, #F6FBF6, #EFF9EF);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #1a3a2a;
   --primary: #7ABD5C;
   --accent: #9B8FD9;
@@ -179,7 +179,7 @@
 .theme-autumn-stream {
   --bg: #FFF6F0;
   --bg-accent: linear-gradient(180deg, #FFF6F0, #FFF2EA);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #3a2415;
   --primary: #A84520;
   --accent: #D97D3D;
@@ -193,7 +193,7 @@
 .theme-ancient-aquarium {
   --bg: #FBF2E0;
   --bg-accent: linear-gradient(180deg, #FBF2E0, #F5E7CF);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #3a2a15;
   --primary: #8B5A2B;
   --accent: #B8860B;
@@ -207,7 +207,7 @@
 .theme-kelp-forest {
   --bg: #07291f;
   --bg-accent: radial-gradient(circle at top, #0b3b2f, #07291f);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #b8e0d8;
   --primary: #1A9B7F;
   --accent: #00D99F;
@@ -221,7 +221,7 @@
 .theme-artists-studio {
   --bg: #F5EFE7;
   --bg-accent: linear-gradient(180deg, #F5EFE7, #EFE5D9);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #2a2420;
   --primary: #C73D4D;
   --accent: #F39C12;
@@ -235,7 +235,7 @@
 .theme-jellyfish-lagoon {
   --bg: #0b0630;
   --bg-accent: radial-gradient(circle at top, #120a3a, #0b0630);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text: #d9c0ff;
   --primary: #7DDFFF;
   --accent: #D97FFF;
