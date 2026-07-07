@@ -144,7 +144,7 @@ const themes = {
 
 },
 
-    rainbow-mist: {
+    "rainbow-mist": {
 
     "--bg": "#4E4C5E",
 
