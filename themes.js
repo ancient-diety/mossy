@@ -46,7 +46,27 @@ const themes = {
         "--card-shadow":
             "0 6px 18px rgba(181,162,212,.22)"
 
-    }
+    },
+
+    "mad-hatter": {
+
+    "--bg": "#241929",
+    "--bg-accent": "linear-gradient(180deg,#2b1d31,#241929)",
+    "--dot-grid": "none",
+
+    "--text": "#E5E6E1",
+
+    "--primary": "#DD1440",
+    "--accent": "#F696B3",
+
+    "--surface": "#5A4864",
+    "--surface-translucent": "rgba(90,72,100,.82)",
+
+    "--bubble-color": "rgba(246,150,179,.15)",
+
+    "--card-shadow": "0 8px 22px rgba(0,0,0,.45)"
+
+}
 
 };
 
