@@ -2,7 +2,11 @@
 :root{
   --bg:#0b0630;
   --bg-accent: radial-gradient(circle at top,#120a3a,#0b0630);
-  --dot-grid: none;
+  --dot-grid:
+  url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'>\
+  <path d='M0 30 Q15 10 30 30 T60 30 T90 30 T120 30' stroke='%23d97fff' stroke-width='1.2' fill='none' opacity='0.12'/>\
+  </svg>");
   --text:#e6e0ff;
   --primary:#8eddf1;
   --accent:#b58cff;
