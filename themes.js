@@ -66,7 +66,28 @@ const themes = {
 
     "--card-shadow": "0 8px 22px rgba(0,0,0,.45)"
 
-}
+},
+
+    "caramel-fudge": {
+        
+    "--bg": "#F2F5E2",
+    "--bg-accent": "linear-gradient(180deg,#F2F5E2,#E3DEA4)",
+    "--dot-grid": "none",
+        
+    "--text": "#290042",
+
+    "--primary": "#775533",
+    "--accent": "#D4954D",
+
+    "--surface": "#FFF9EF",
+    "--surface-translucent": "rgba(255,249,239,.85)",
+
+    "--bubble-color": "rgba(212,149,77,.15)",
+
+    "--card-shadow": "0 8px 22px rgba(41,0,66,.15)"
+
+},
+        
 
 };
 
