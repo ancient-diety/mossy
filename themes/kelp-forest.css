@@ -2,7 +2,7 @@
 :root{
   --bg:#07291f;
   --bg-accent: radial-gradient(circle at top,#0b3b2f,#07291f);
-  --dot-grid: none;
+  --bg-pattern: none;
   --text:#d9efe8;
   --primary:#2aa689;
   --accent:#1f7a66;
