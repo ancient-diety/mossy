@@ -1,8 +1,8 @@
 :root{
-  /* Core tokens (default = Light theme) */
+  /* Core tokens (Light theme) */
   --bg: #d9f3f6;
   --bg-accent: radial-gradient(circle at top, #eafcff, #d9f3f6);
-  --dot-grid: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><circle cx='3' cy='3' r='1' fill='%2374a6b0' fill-opacity='0.06'/></svg>");
+  --dot-grid: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><circle cx='3' cy='3' r='1.5' fill='%2374a6b0' fill-opacity='0.08'/></svg>");
 
   --text: #3a616b;
   --primary: #1f4e5f;
@@ -17,175 +17,232 @@
   --transition: 220ms ease;
 }
 
-/* Theme: Sunset Reef */
-.theme-sunset-reef{
+/* ===== LIGHT & DARK MODES ===== */
+
+/* Theme: Light (Default) */
+.theme-light {
+  --bg: #d9f3f6;
+  --bg-accent: radial-gradient(circle at top, #eafcff, #d9f3f6);
+  --dot-grid: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><circle cx='3' cy='3' r='1.5' fill='%2374a6b0' fill-opacity='0.08'/></svg>");
+  --text: #3a616b;
+  --primary: #1f4e5f;
+  --accent: #4a90a4;
+  --surface: #FFFBF5;
+  --surface-translucent: rgba(255,251,245,0.7);
+  --bubble-color: rgba(74,144,164,0.12);
+  --card-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Theme: Dark (Dark version of Light) */
+.theme-dark {
+  --bg: #1a2a33;
+  --bg-accent: radial-gradient(circle at top, #223849, #1a2a33);
+  --dot-grid: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><circle cx='3' cy='3' r='1.5' fill='%238fbfd4' fill-opacity='0.12'/></svg>");
+  --text: #b8d4e0;
+  --primary: #4fa3d1;
+  --accent: #7bc7e8;
+  --surface: #253544;
+  --surface-translucent: rgba(37,53,68,0.7);
+  --bubble-color: rgba(123,199,232,0.15);
+  --card-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+/* ===== COLORED THEMES ===== */
+
+/* Theme: Sunset Reef - Warm oranges, corals, pinks, cream */
+.theme-sunset-reef {
   --bg: #FFF2EA;
-  --bg-accent: linear-gradient(180deg,#FFF2EA,#FFE8D8);
+  --bg-accent: linear-gradient(180deg, #FFF2EA, #FFE8D8);
   --dot-grid: none;
   --text: #5b3728;
   --primary: #FF6D3A;
   --accent: #FF9E6B;
   --surface: #FFF7F3;
   --surface-translucent: rgba(255,247,243,0.8);
+  --bubble-color: rgba(255, 109, 58, 0.15);
+  --card-shadow: 0 6px 16px rgba(255, 109, 58, 0.15);
 }
 
-/* Theme: Moss Garden */
-.theme-moss-garden{
-  --bg:#EBF6EE;
-  --bg-accent: linear-gradient(180deg,#F6FBF7,#EBF6EE);
+/* Theme: Moss Garden - Greens, soft sage */
+.theme-moss-garden {
+  --bg: #EBF6EE;
+  --bg-accent: linear-gradient(180deg, #F6FBF7, #EBF6EE);
   --dot-grid: none;
-  --text:#34563b;
-  --primary:#3E6B46;
-  --accent:#6B8F65;
-  --surface:#F7FBF8;
+  --text: #34563b;
+  --primary: #3E6B46;
+  --accent: #6B8F65;
+  --surface: #F7FBF8;
   --surface-translucent: rgba(247,251,248,0.8);
+  --bubble-color: rgba(62, 107, 70, 0.12);
+  --card-shadow: 0 6px 16px rgba(62, 107, 70, 0.12);
 }
 
-/* Theme: Coral Reef */
-.theme-coral-reef{
-  --bg:#EAFBF8;
-  --bg-accent: linear-gradient(180deg,#EAFBF8,#DFF9F4);
+/* Theme: Coral Reef - Bright turquoise, coral pink, seafoam */
+.theme-coral-reef {
+  --bg: #EAFBF8;
+  --bg-accent: linear-gradient(180deg, #EAFBF8, #DFF9F4);
   --dot-grid: none;
-  --text:#1f5b57;
-  --primary:#2ED6C6;
-  --accent:#FF6FA3;
-  --surface:#F8FFFD;
+  --text: #1f5b57;
+  --primary: #2ED6C6;
+  --accent: #FF6FA3;
+  --surface: #F8FFFD;
   --surface-translucent: rgba(248,255,253,0.8);
+  --bubble-color: rgba(46, 214, 198, 0.15);
+  --card-shadow: 0 6px 16px rgba(46, 214, 198, 0.12);
 }
 
-/* Theme: Arctic Ocean */
-.theme-arctic-ocean{
-  --bg:#F8FCFF;
-  --bg-accent: linear-gradient(180deg,#F8FCFF,#EEF9FF);
+/* Theme: Arctic Ocean - White, ice blue, minimal */
+.theme-arctic-ocean {
+  --bg: #F8FCFF;
+  --bg-accent: linear-gradient(180deg, #F8FCFF, #EEF9FF);
   --dot-grid: none;
-  --text:#24434f;
-  --primary:#BEE8FF;
-  --accent:#9FD9FF;
-  --surface:#F1FBFF;
+  --text: #24434f;
+  --primary: #BEE8FF;
+  --accent: #9FD9FF;
+  --surface: #F1FBFF;
   --surface-translucent: rgba(241,251,255,0.8);
+  --bubble-color: rgba(158, 217, 255, 0.15);
+  --card-shadow: 0 6px 16px rgba(158, 217, 255, 0.1);
 }
 
-/* Theme: Deep Sea */
-.theme-deep-sea{
-  --bg:#02030a;
-  --bg-accent: radial-gradient(circle at top,#041226,#02030a);
+/* Theme: Deep Sea - Black, dark blue, purple accents, glowing highlights */
+.theme-deep-sea {
+  --bg: #02030a;
+  --bg-accent: radial-gradient(circle at top, #041226, #02030a);
   --dot-grid: none;
-  --text:#bfeaff;
-  --primary:#0ea4ff;
-  --accent:#6a4cff;
-  --surface:#041226;
+  --text: #bfeaff;
+  --primary: #0ea4ff;
+  --accent: #6a4cff;
+  --surface: #041226;
   --surface-translucent: rgba(4,18,38,0.7);
   --bubble-color: rgba(110,90,255,0.35);
   --card-shadow: 0 10px 30px rgba(0,0,0,0.7);
 }
 
-/* Theme: Bubble Bath */
-.theme-bubble-bath{
-  --bg:#FBF8FF;
-  --bg-accent: linear-gradient(180deg,#FBF8FF,#F8F6FF);
+/* Theme: Bubble Bath - Pastel, soft, dreamy */
+.theme-bubble-bath {
+  --bg: #FBF8FF;
+  --bg-accent: linear-gradient(180deg, #FBF8FF, #F8F6FF);
   --dot-grid: none;
-  --text:#5a5160;
-  --primary:#F6D8FF;
-  --accent:#C9F0FF;
-  --surface:#FFFBFF;
+  --text: #5a5160;
+  --primary: #F6D8FF;
+  --accent: #C9F0FF;
+  --surface: #FFFBFF;
   --surface-translucent: rgba(255,255,255,0.75);
+  --bubble-color: rgba(246, 216, 255, 0.2);
+  --card-shadow: 0 6px 16px rgba(246, 216, 255, 0.15);
 }
 
-/* Theme: Pebble Theme */
-.theme-pebble-theme{
-  --bg:#ECECEC;
-  --bg-accent: linear-gradient(180deg,#F1F1F1,#ECECEC);
+/* Theme: Pebble Theme - Greys, slate, stone */
+.theme-pebble-theme {
+  --bg: #ECECEC;
+  --bg-accent: linear-gradient(180deg, #F1F1F1, #ECECEC);
   --dot-grid: none;
-  --text:#33383b;
-  --primary:#7B7F85;
-  --accent:#A5A8AC;
-  --surface:#F7F7F7;
+  --text: #33383b;
+  --primary: #7B7F85;
+  --accent: #A5A8AC;
+  --surface: #F7F7F7;
   --surface-translucent: rgba(247,247,247,0.85);
+  --bubble-color: rgba(123, 127, 133, 0.12);
+  --card-shadow: 0 6px 16px rgba(123, 127, 133, 0.12);
 }
 
-/* Theme: Shrimp Theme */
-.theme-shrimp-theme{
-  --bg:#FFF6F4;
-  --bg-accent: linear-gradient(180deg,#FFF6F4,#FFEEE9);
+/* Theme: Shrimp Theme - Orange, salmon, pink */
+.theme-shrimp-theme {
+  --bg: #FFF6F4;
+  --bg-accent: linear-gradient(180deg, #FFF6F4, #FFEEE9);
   --dot-grid: none;
-  --text:#5a342c;
-  --primary:#FF6A4A;
-  --accent:#FFB3A0;
-  --surface:#FFF9F8;
+  --text: #5a342c;
+  --primary: #FF6A4A;
+  --accent: #FFB3A0;
+  --surface: #FFF9F8;
   --surface-translucent: rgba(255,249,248,0.8);
+  --bubble-color: rgba(255, 106, 74, 0.15);
+  --card-shadow: 0 6px 16px rgba(255, 106, 74, 0.12);
 }
 
-/* Theme: Spring Pond */
-.theme-spring-pond{
-  --bg:#F6FBF6;
-  --bg-accent: linear-gradient(180deg,#F6FBF6,#EFF9EF);
+/* Theme: Spring Pond - Soft greens, lilac, pale yellow, flowers */
+.theme-spring-pond {
+  --bg: #F6FBF6;
+  --bg-accent: linear-gradient(180deg, #F6FBF6, #EFF9EF);
   --dot-grid: none;
-  --text:#2f5a49;
-  --primary:#BEE8B1;
-  --accent:#C7C0F0;
-  --surface:#FBFFF9;
+  --text: #2f5a49;
+  --primary: #BEE8B1;
+  --accent: #C7C0F0;
+  --surface: #FBFFF9;
   --surface-translucent: rgba(251,255,249,0.8);
+  --bubble-color: rgba(190, 232, 177, 0.15);
+  --card-shadow: 0 6px 16px rgba(190, 232, 177, 0.12);
 }
 
-/* Theme: Autumn Stream */
-.theme-autumn-stream{
-  --bg:#FFF6F0;
-  --bg-accent: linear-gradient(180deg,#FFF6F0,#FFF2EA);
+/* Theme: Autumn Stream - Warm browns, golds, rust oranges, cream */
+.theme-autumn-stream {
+  --bg: #FFF6F0;
+  --bg-accent: linear-gradient(180deg, #FFF6F0, #FFF2EA);
   --dot-grid: none;
-  --text:#5a3b2a;
-  --primary:#C05A2B;
-  --accent:#A67A52;
-  --surface:#FFF8F4;
+  --text: #5a3b2a;
+  --primary: #C05A2B;
+  --accent: #A67A52;
+  --surface: #FFF8F4;
   --surface-translucent: rgba(255,248,244,0.8);
+  --bubble-color: rgba(192, 90, 43, 0.12);
+  --card-shadow: 0 6px 16px rgba(192, 90, 43, 0.12);
 }
 
-/* Theme: Ancient Aquarium */
-.theme-ancient-aquarium{
-  --bg:#FBF2E0;
-  --bg-accent: linear-gradient(180deg,#FBF2E0,#F5E7CF);
+/* Theme: Ancient Aquarium - Parchment, warm browns */
+.theme-ancient-aquarium {
+  --bg: #FBF2E0;
+  --bg-accent: linear-gradient(180deg, #FBF2E0, #F5E7CF);
   --dot-grid: none;
-  --text:#4b3720;
-  --primary:#A66E2A;
-  --accent:#C49A57;
-  --surface:#F7EACF;
+  --text: #4b3720;
+  --primary: #A66E2A;
+  --accent: #C49A57;
+  --surface: #F7EACF;
   --surface-translucent: rgba(247,234,207,0.85);
+  --bubble-color: rgba(166, 110, 42, 0.12);
+  --card-shadow: 0 6px 16px rgba(166, 110, 42, 0.12);
 }
 
-/* Theme: Kelp Forest */
-.theme-kelp-forest{
-  --bg:#07291f;
-  --bg-accent: radial-gradient(circle at top,#0b3b2f,#07291f);
+/* Theme: Kelp Forest - Dark greens, teal, lush */
+.theme-kelp-forest {
+  --bg: #07291f;
+  --bg-accent: radial-gradient(circle at top, #0b3b2f, #07291f);
   --dot-grid: none;
-  --text:#d9efe8;
-  --primary:#2aa689;
-  --accent:#1f7a66;
-  --surface:#0f3b33;
+  --text: #d9efe8;
+  --primary: #2aa689;
+  --accent: #1f7a66;
+  --surface: #0f3b33;
   --surface-translucent: rgba(15,59,51,0.7);
+  --bubble-color: rgba(42, 166, 137, 0.25);
+  --card-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* Theme: Artist's Studio */
-.theme-artists-studio{
-  --bg:#fffaf6;
-  --bg-accent: linear-gradient(180deg,#fffaf6,#fff3ec);
+/* Theme: Artist's Studio - Paint splashes, soft pastels, sketchbook */
+.theme-artists-studio {
+  --bg: #fffaf6;
+  --bg-accent: linear-gradient(180deg, #fffaf6, #fff3ec);
   --dot-grid: none;
-  --text:#3f3a36;
-  --primary:#FFD6E0;
-  --accent:#C9E9FF;
-  --surface:#FFFBF7;
+  --text: #3f3a36;
+  --primary: #FFD6E0;
+  --accent: #C9E9FF;
+  --surface: #FFFBF7;
   --surface-translucent: rgba(255,251,247,0.8);
+  --bubble-color: rgba(255, 214, 224, 0.15);
+  --card-shadow: 0 6px 16px rgba(255, 214, 224, 0.12);
 }
 
-/* Theme: Jellyfish Lagoon */
-.theme-jellyfish-lagoon{
-  --bg:#0b0630;
-  --bg-accent: radial-gradient(circle at top,#120a3a,#0b0630);
+/* Theme: Jellyfish Lagoon - Purple, blue, pink, glowing */
+.theme-jellyfish-lagoon {
+  --bg: #0b0630;
+  --bg-accent: radial-gradient(circle at top, #120a3a, #0b0630);
   --dot-grid: none;
-  --text:#e6e0ff;
-  --primary:#8eddf1;
-  --accent:#b58cff;
-  --surface:#120924;
+  --text: #e6e0ff;
+  --primary: #8eddf1;
+  --accent: #b58cff;
+  --surface: #120924;
   --surface-translucent: rgba(18,9,36,0.7);
   --bubble-color: rgba(180,140,255,0.28);
+  --card-shadow: 0 10px 30px rgba(180,140,255,0.15);
 }
 
 /* Smooth transitions for theme colors */
@@ -210,20 +267,21 @@ body {
 h1,
 h2 {
     text-align: center;
-    color: #2f6f85;
+    color: var(--primary);
 }
 
 h1 {
-    color: #1f4e5f;
-    text-shadow: 0 0 10px rgba(143, 191, 212, 0.5);
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 p {
     text-align: center;
+    color: var(--text);
 }
 
 h2 {
-    color: #2f6f85;
+    color: var(--primary);
 }
 
 /* 🐟 SIDEBAR (DESKTOP - FIXED TANK STYLE) */
@@ -234,34 +292,63 @@ h2 {
     width: 200px;
     height: calc(100vh - 24px);
 
-    background-color: #1f4e5f;
+    background-color: var(--primary);
     padding: 16px;
     border-radius: 18px;
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: var(--card-shadow);
     overflow-y: auto;
 }
 
 .sidebar h3 {
-    color: #d9f3f6;
+    color: var(--accent);
     text-align: center;
     margin-bottom: 15px;
 }
 
+#theme-selector-container {
+    margin-bottom: 12px;
+}
+
+#theme-selector {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid var(--accent);
+    background-color: var(--surface);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+#theme-selector:hover {
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+#theme-selector:focus {
+    outline: none;
+    box-shadow: 0 0 12px var(--accent);
+}
+
 .sidebar a {
     display: block;
-    color: #8fbfd4;
+    color: rgba(255,255,255,0.9);
     text-decoration: none;
     margin: 8px 0;
     padding: 10px;
     border-radius: 12px;
     transition: 0.2s;
     text-align: center;
+    background-color: rgba(255,255,255,0.1);
 }
 
 .sidebar a:hover {
-    background-color: #4a90a4;
-    color: white;
+    background-color: var(--accent);
+    color: var(--primary);
+    transform: translateX(2px);
 }
 
 /* 🧊 PANELS */
@@ -270,7 +357,7 @@ h2 {
     padding: 18px;
     border-radius: 16px;
     margin: 16px 0;
-    box-shadow: 0 6px 18px rgba(31, 78, 95, 0.12);
+    box-shadow: var(--card-shadow);
 }
 
 /* 🧭 GRID */
@@ -283,29 +370,29 @@ h2 {
 .card {
     flex: 1;
     min-width: 200px;
-    background-color: #2f6f85;
+    background-color: var(--primary);
     color: #d9f3f6;
     padding: 16px;
     border-radius: 16px;
     text-decoration: none;
     transition: 0.25s;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    box-shadow: var(--card-shadow);
     text-align: center;
 }
 
 .card:hover {
     transform: translateY(-4px) scale(1.03);
-    background-color: #4a90a4;
+    background-color: var(--accent);
 }
 
 .card p {
-    color: #cfefff;
+    color: rgba(255,255,255,0.85);
     font-size: 0.9em;
 }
 
 /* 🎯 BUTTONS */
 button {
-    background-color: #2f6f85;
+    background-color: var(--primary);
     color: #eaffff;
     border: none;
     padding: 10px 18px;
@@ -314,10 +401,11 @@ button {
     transition: 0.2s;
     display: block;
     margin: 10px auto;
+    box-shadow: var(--card-shadow);
 }
 
 button:hover {
-    background-color: #4a90a4;
+    background-color: var(--accent);
     transform: scale(1.05);
 }
 
@@ -350,7 +438,7 @@ button:hover {
     100% { transform: translateY(-900px); opacity: 0; }
 }
 
-/* 📱 MOBILE FIX (THIS IS THE REAL FIX) */
+/* 📱 MOBILE FIX */
 @media (max-width: 768px) {
 
     body {
@@ -359,7 +447,6 @@ button:hover {
         max-width: 100%;
     }
 
-    /* 🐟 sidebar becomes a TOP DOCK (NOT floating, NOT sticky, NOT broken) */
     .sidebar {
         position: relative;
         width: auto;
@@ -374,7 +461,7 @@ button:hover {
         flex-direction: column;
         align-items: center;
 
-        box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+        box-shadow: var(--card-shadow);
     }
 
     .sidebar a {
@@ -439,7 +526,7 @@ button:hover {
         transform:translate(-50%,-56%);
     }
 
-} 
+}
 
 /* 🐌 Secret Snail */
 
