@@ -172,6 +172,34 @@ const themes = {
 
 },
 
+    pebble: {
+
+    "--bg": "#F3F2EE",
+
+    "--bg-accent":
+        "linear-gradient(180deg, #F3F2EE, #B2B0AC)",
+
+    "--dot-grid": "none",
+
+    "--text": "#21211D",
+
+    "--primary": "#6F6F6B",
+
+    "--accent": "#524D4B",
+
+    "--surface": "#E5E3DE",
+
+    "--surface-translucent":
+        "rgba(243,242,238,.85)",
+
+    "--bubble-color":
+        "rgba(178,176,172,.25)",
+
+    "--card-shadow":
+        "0 8px 22px rgba(33,33,29,.18)"
+
+},
+    
 };
 
 function applyTheme(themeName) {
