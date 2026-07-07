@@ -49,3 +49,24 @@ const themes = {
     }
 
 };
+
+function applyTheme(themeName) {
+
+    const theme = themes[themeName];
+
+    if (!theme) return;
+
+    for (const variable in theme) {
+
+        document.documentElement.style.setProperty(
+            variable,
+            theme[variable]
+        );
+
+    }
+
+}
+
+const savedTheme = "whimsical";
+
+applyTheme(savedTheme);
