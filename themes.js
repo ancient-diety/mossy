@@ -311,6 +311,34 @@ const themes = {
         "0 8px 20px rgba(38,3,9,.18)"
 
 },
+
+    sakura: {
+
+    "--bg": "#AA7F66",
+
+    "--bg-accent":
+        "linear-gradient(180deg,#EC9C9D,#AA7F66)",
+
+    "--dot-grid": "none",
+
+    "--text": "#443025",
+
+    "--primary": "#7F5836",
+
+    "--accent": "#F2CF2A",
+
+    "--surface": "#F5DDD7",
+
+    "--surface-translucent":
+        "rgba(245,221,215,.85)",
+
+    "--bubble-color":
+        "rgba(236,156,157,.18)",
+
+    "--card-shadow":
+        "0 8px 22px rgba(68,48,37,.18)"
+
+},
     
 };
 
