@@ -508,3 +508,23 @@ body.theme-rowan{
         0 0 2px rgba(255,255,255,.03);
 
 }
+
+@keyframes rowanHeartbeat{
+
+    0%,100%{
+        filter:brightness(1);
+    }
+
+    50%{
+        filter:brightness(1.06);
+    }
+
+}
+
+body.theme-rowan .sidebar,
+body.theme-rowan button,
+body.theme-rowan .card{
+
+    animation:rowanHeartbeat 12s ease-in-out infinite;
+
+}
