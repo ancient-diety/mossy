@@ -528,3 +528,13 @@ body.theme-rowan .card{
     animation:rowanHeartbeat 12s ease-in-out infinite;
 
 }
+
+/* ======================================
+        🌹 ROWAN PARTICLES
+====================================== */
+
+.rowan-particles{
+
+    display:none;
+
+}
