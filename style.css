@@ -779,3 +779,156 @@ body.theme-sakura .sakura-petals span:nth-child(12){left:49%; animation: sakuraF
     }
 
 }
+
+/* ======================================
+        🎩 MAD HATTER PARTICLES
+====================================== */
+
+.mad-hatter-particles{
+    display:none;
+}
+
+body.theme-mad-hatter .mad-hatter-particles{
+    display:block;
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:1;
+}
+
+body.theme-mad-hatter .bubbles{
+    display:none;
+}
+
+body.theme-mad-hatter .mad-hatter-particles span{
+
+    position:absolute;
+    top:-80px;
+
+    font-size:18px;
+
+    opacity:.9;
+
+    animation:cardFall linear infinite;
+
+}
+
+/* Positions */
+
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(1){left:4%;animation-duration:14s;animation-delay:-2s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(2){left:10%;animation-duration:18s;animation-delay:-7s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(3){left:17%;animation-duration:16s;animation-delay:-5s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(4){left:24%;animation-duration:20s;animation-delay:-10s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(5){left:31%;animation-duration:17s;animation-delay:-3s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(6){left:38%;animation-duration:15s;animation-delay:-11s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(7){left:45%;animation-duration:22s;animation-delay:-6s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(8){left:52%;animation-duration:16s;animation-delay:-13s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(9){left:59%;animation-duration:19s;animation-delay:-8s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(10){left:66%;animation-duration:14s;animation-delay:-4s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(11){left:73%;animation-duration:20s;animation-delay:-12s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(12){left:80%;animation-duration:17s;animation-delay:-5s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(13){left:86%;animation-duration:18s;animation-delay:-9s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(14){left:92%;animation-duration:16s;animation-delay:-2s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(15){left:48%;animation-duration:24s;animation-delay:-15s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(16){left:7%;animation-duration:18s;animation-delay:-4s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(17){left:27%;animation-duration:15s;animation-delay:-8s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(18){left:58%;animation-duration:20s;animation-delay:-6s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(19){left:76%;animation-duration:17s;animation-delay:-10s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(20){left:35%;animation-duration:13s;animation-delay:-1s;}
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(21){left:90%;animation-duration:23s;animation-delay:-12s;}
+
+/* Jokers */
+
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(1),
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(10),
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(20){
+
+    font-size:28px;
+
+}
+
+/* Hats */
+
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(15),
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(21){
+
+    font-size:24px;
+
+}
+
+/* Some cards tumble backwards */
+
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(6),
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(13),
+body.theme-mad-hatter .mad-hatter-particles span:nth-child(18){
+
+    animation-direction:reverse;
+
+}
+
+/* Animation */
+
+@keyframes cardFall{
+
+    0%{
+
+        transform:
+            translateY(-80px)
+            translateX(0px)
+            rotate(0deg)
+            scale(.9);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:.95;
+
+    }
+
+    25%{
+
+        transform:
+            translateY(25vh)
+            translateX(22px)
+            rotate(180deg)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(50vh)
+            translateX(-18px)
+            rotate(360deg)
+            scale(.95);
+
+    }
+
+    75%{
+
+        transform:
+            translateY(75vh)
+            translateX(25px)
+            rotate(540deg)
+            scale(1.05);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(calc(100vh + 120px))
+            translateX(-25px)
+            rotate(720deg)
+            scale(.9);
+
+        opacity:0;
+
+    }
+
+}
