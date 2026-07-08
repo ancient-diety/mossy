@@ -413,11 +413,11 @@ function applyTheme(themeName) {
 
     }
 
-    document.body.classList.remove("theme-rowan");
+    // Remove old theme classes
+    document.body.className = document.body.className.replace(/\btheme-\S+/g, "");
 
-    if(themeName === "rowan"){
-        document.body.classList.add("theme-rowan");
-    }
+    // Add the current theme class
+    document.body.classList.add(`theme-${themeName}`);
 
 }
 
