@@ -538,3 +538,172 @@ body.theme-rowan .card{
     display:none;
 
 }
+
+body.theme-rowan .rowan-particles{
+
+    display:block;
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+body.theme-rowan .rowan-particles span{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:#780000;
+
+    box-shadow:
+
+        0 0 12px #780000,
+
+        0 0 24px rgba(120,0,0,.45);
+
+    opacity:.6;
+
+    animation:
+        rowanFloat linear infinite;
+
+}
+
+body.theme-rowan .rowan-particles span:nth-child(1){
+
+    left:12%;
+
+    top:80%;
+
+    animation-duration:17s;
+
+}
+
+body.theme-rowan .rowan-particles span:nth-child(2){
+
+    left:28%;
+
+    top:45%;
+
+    animation-duration:22s;
+
+}
+
+body.theme-rowan .rowan-particles span:nth-child(3){
+
+    left:70%;
+
+    top:65%;
+
+    animation-duration:18s;
+
+}
+
+body.theme-rowan .rowan-particles span:nth-child(4){
+
+    left:82%;
+
+    top:22%;
+
+    animation-duration:25s;
+
+}
+
+body.theme-rowan .rowan-particles span:nth-child(5){
+
+    left:40%;
+
+    top:12%;
+
+    animation-duration:20s;
+
+}
+
+body.theme-rowan .rowan-particles span:nth-child(6){
+
+    left:55%;
+
+    top:88%;
+
+    animation-duration:23s;
+
+}
+
+body.theme-rowan .rowan-particles span:nth-child(7){
+
+    left:90%;
+
+    top:50%;
+
+    animation-duration:19s;
+
+}
+
+body.theme-rowan .rowan-particles span:nth-child(8){
+
+    left:6%;
+
+    top:25%;
+
+    animation-duration:24s;
+
+}
+
+@keyframes rowanFloat{
+
+    0%{
+
+        transform:
+            translateY(0px)
+            translateX(0px);
+
+    }
+
+    25%{
+
+        transform:
+            translateY(-10px)
+            translateX(6px);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-20px)
+            translateX(-6px);
+
+    }
+
+    75%{
+
+        transform:
+            translateY(-10px)
+            translateX(5px);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(0px)
+            translateX(0px);
+
+    }
+
+}
+
+body.theme-rowan .bubbles{
+
+    display:none;
+
+}
