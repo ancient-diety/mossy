@@ -704,3 +704,117 @@ body.theme-rowan .rowan-particles span:nth-child(12){
 body.theme-rowan .bubbles{
     display:none;
 }
+
+/* ======================================
+        🌸 SAKURA PETALS
+====================================== */
+
+.sakura-petals{
+    display:none;
+}
+
+body.theme-sakura .sakura-petals span{
+
+    position:absolute;
+
+    font-size:22px;
+
+    opacity:.85;
+
+    animation:sakuraFall linear infinite;
+
+    filter:drop-shadow(
+        0 0 6px rgba(236,156,157,.35)
+    );
+
+}
+
+body.theme-sakura .bubbles{
+
+    display:none;
+
+}
+
+body.theme-sakura .sakura-petals span{
+
+    position:absolute;
+
+    font-size:22px;
+
+    opacity:.85;
+
+    animation:sakuraFall linear infinite;
+
+}
+
+    body.theme-sakura .sakura-petals span:nth-child(1){left:5%; animation-duration:14s; animation-delay:-1s;}
+    body.theme-sakura .sakura-petals span:nth-child(2){left:15%; animation-duration:17s; animation-delay:-4s;}
+    body.theme-sakura .sakura-petals span:nth-child(3){left:25%; animation-duration:15s; animation-delay:-9s;}
+    body.theme-sakura .sakura-petals span:nth-child(4){left:35%; animation-duration:19s; animation-delay:-6s;}
+    body.theme-sakura .sakura-petals span:nth-child(5){left:45%; animation-duration:16s; animation-delay:-11s;}
+    body.theme-sakura .sakura-petals span:nth-child(6){left:55%; animation-duration:18s; animation-delay:-7s;}
+    body.theme-sakura .sakura-petals span:nth-child(7){left:65%; animation-duration:15s; animation-delay:-13s;}
+    body.theme-sakura .sakura-petals span:nth-child(8){left:75%; animation-duration:20s; animation-delay:-2s;}
+    body.theme-sakura .sakura-petals span:nth-child(9){left:82%; animation-duration:17s; animation-delay:-10s;}
+    body.theme-sakura .sakura-petals span:nth-child(10){left:90%; animation-duration:21s; animation-delay:-5s;}
+    body.theme-sakura .sakura-petals span:nth-child(11){left:58%; animation-duration:18s; animation-delay:-14s;}
+    body.theme-sakura .sakura-petals span:nth-child(12){left:30%; animation-duration:16s; animation-delay:-8s;}
+
+@keyframes sakuraFall{
+
+    0%{
+
+        transform:
+            translateY(-120px)
+            translateX(0px)
+            rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:.9;
+
+    }
+
+    25%{
+
+        transform:
+            translateY(25vh)
+            translateX(18px)
+            rotate(90deg);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(50vh)
+            translateX(-22px)
+            rotate(180deg);
+
+    }
+
+    75%{
+
+        transform:
+            translateY(75vh)
+            translateX(15px)
+            rotate(270deg);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(110vh)
+            translateX(-18px)
+            rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
