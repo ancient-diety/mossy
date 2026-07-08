@@ -22,6 +22,9 @@ body {
     background-image: var(--bg-accent), var(--dot-grid);
     background-repeat: repeat, repeat;
     background-position: center top, 0 0;
+    background-size:
+    cover,
+    24px 24px;
 
     color: var(--text);
 
