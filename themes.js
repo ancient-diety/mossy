@@ -283,6 +283,34 @@ const themes = {
         "0 8px 20px rgba(121,56,11,.18)"
 
 },
+
+    raspberry: {
+
+    "--bg": "#F9EBF2",
+
+    "--bg-accent":
+        "linear-gradient(180deg,#F9EBF2,#EBA2B9)",
+
+    "--dot-grid": "none",
+
+    "--text": "#260309",
+
+    "--primary": "#BF3054",
+
+    "--accent": "#EBA2B9",
+
+    "--surface": "#FFFFFF",
+
+    "--surface-translucent":
+        "rgba(255,255,255,.82)",
+
+    "--bubble-color":
+        "rgba(191,48,84,.16)",
+
+    "--card-shadow":
+        "0 8px 20px rgba(38,3,9,.18)"
+
+},
     
 };
 
