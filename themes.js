@@ -413,6 +413,12 @@ function applyTheme(themeName) {
 
     }
 
+    document.body.classList.remove("theme-rowan");
+
+    if(themeName === "rowan"){
+        document.body.classList.add("theme-rowan");
+    }
+
 }
 
 const selector = document.getElementById("theme-selector");
