@@ -339,6 +339,34 @@ const themes = {
         "0 8px 22px rgba(68,48,37,.18)"
 
 },
+
+    almond: {
+
+    "--bg": "#E9D8C6",
+
+    "--bg-accent":
+        "linear-gradient(180deg,#E9D8C6,#DDBDA5)",
+
+    "--dot-grid": "none",
+
+    "--text": "#5A4032",
+
+    "--primary": "#BA856B",
+
+    "--accent": "#C49B85",
+
+    "--surface": "#F3E8DD",
+
+    "--surface-translucent":
+        "rgba(243,232,221,.85)",
+
+    "--bubble-color":
+        "rgba(196,155,133,.18)",
+
+    "--card-shadow":
+        "0 8px 22px rgba(90,64,50,.18)"
+
+},
     
 };
 
