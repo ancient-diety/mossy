@@ -367,6 +367,34 @@ const themes = {
         "0 8px 22px rgba(90,64,50,.18)"
 
 },
+
+    rowan: {
+
+    "--bg": "#141414",
+
+    "--bg-accent":
+        "radial-gradient(circle at top,#1D1D1D,#141414)",
+
+    "--dot-grid": "none",
+
+    "--text": "#E8E5E2",
+
+    "--primary": "#780000",
+
+    "--accent": "#C8C3BE",
+
+    "--surface": "#202020",
+
+    "--surface-translucent":
+        "rgba(32,32,32,.86)",
+
+    "--bubble-color":
+        "rgba(120,0,0,.18)",
+
+    "--card-shadow":
+        "0 10px 24px rgba(0,0,0,.55)"
+
+},
     
 };
 
