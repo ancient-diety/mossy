@@ -255,6 +255,34 @@ const themes = {
         "0 8px 22px rgba(0,0,0,.45)"
 
 },
+
+    goldenHour: {
+
+    "--bg": "#FBF5D2",
+
+    "--bg-accent":
+        "linear-gradient(180deg,#FBF5D2,#FEE39F)",
+
+    "--dot-grid": "none",
+
+    "--text": "#441004",
+
+    "--primary": "#79380B",
+
+    "--accent": "#EFBB55",
+
+    "--surface": "#FEE39F",
+
+    "--surface-translucent":
+        "rgba(254,227,159,.85)",
+
+    "--bubble-color":
+        "rgba(239,187,85,.18)",
+
+    "--card-shadow":
+        "0 8px 20px rgba(121,56,11,.18)"
+
+},
     
 };
 
