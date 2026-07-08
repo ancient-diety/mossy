@@ -358,3 +358,153 @@ button:active {
     z-index:999;
 
 }
+
+/* ===========================================
+                🌹 ROWAN
+=========================================== */
+
+body.theme-rowan{
+
+    background-size:300% 300%,auto;
+
+    animation:rowanGradient 45s ease infinite;
+
+    cursor:default;
+
+}
+
+/* Slow moving background */
+
+@keyframes rowanGradient{
+
+    0%{
+        background-position:left top,0 0;
+    }
+
+    50%{
+        background-position:right top,0 0;
+    }
+
+    100%{
+        background-position:left top,0 0;
+    }
+
+}
+
+/* Vignette */
+
+body.theme-rowan::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        radial-gradient(
+            circle,
+            transparent 55%,
+            rgba(0,0,0,.38)
+        );
+
+    z-index:-1;
+
+}
+
+/* Sidebar */
+
+body.theme-rowan .sidebar{
+
+    background:
+        linear-gradient(
+            180deg,
+            #780000,
+            #2A0000
+        );
+
+}
+
+/* Glass panels */
+
+body.theme-rowan .panel{
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+/* Fancy headings */
+
+body.theme-rowan h1,
+body.theme-rowan h2{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    letter-spacing:.05em;
+
+    text-shadow:
+        0 0 12px rgba(120,0,0,.25);
+
+}
+
+/* Card glow */
+
+body.theme-rowan .card:hover{
+
+    box-shadow:
+
+        0 0 18px rgba(120,0,0,.45),
+
+        0 0 40px rgba(120,0,0,.18);
+
+}
+
+/* Sidebar underline */
+
+body.theme-rowan .sidebar a{
+
+    position:relative;
+
+}
+
+body.theme-rowan .sidebar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:15%;
+
+    bottom:6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#C8C3BE;
+
+    transition:.35s;
+
+}
+
+body.theme-rowan .sidebar a:hover::after{
+
+    width:70%;
+
+}
+
+/* Slightly softer text */
+
+body.theme-rowan{
+
+    text-shadow:
+        0 0 2px rgba(255,255,255,.03);
+
+}
