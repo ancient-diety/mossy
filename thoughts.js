@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "I blinked.",
         "The gravel moved.",
         "Glub.",
-        "I wonder where the shrimp went."
+        "I wonder where the shrimp went.",
+        "Baby shark do do do do do doo~",
+        "Where did the shrimp go?"
     ];
 
     function changeThought() {
